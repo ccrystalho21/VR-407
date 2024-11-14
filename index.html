@@ -9,131 +9,386 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.16.0/cdn/themes/light.css" />
   <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.16.0/cdn/shoelace-autoloader.js"></script>
 
-  <!-- Link to Team Member Component -->
-  <link rel="stylesheet" href="./components/team-member/team-member.css">
-  <script type="module" src="./components/team-member/team-member.js"></script>
-
   <style>
     /* Basic styling for readability */
     body {
       font-family: Arial, sans-serif;
       line-height: 1.6;
-      max-width: 800px;
       margin: auto;
       padding: 20px;
+      background-color: #f9f9f9;
+      max-width: 900px;
     }
+
+    /* Header Styling */
+    .header {
+      background-color: #4a90e2;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+
     h1, h2, h3 {
       margin-top: 1em;
+    }
+
+    /* Table Styling */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      font-family: Arial, sans-serif;
+    }
+    th, td {
+      border: 1px solid #333;
+      padding: 10px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background-color: #f2f2f2;
+      font-weight: bold;
+    }
+    td {
+      white-space: pre-line;
     }
   </style>
 </head>
 <body>
 
-  <h1>Project Report</h1>
-
-  <!-- Team Member Information -->
-  <div class="team-member-wrapper">
-    <team-member avatar="assets/ID.jpg" name="Ho Jia En Crystal" department="Biomedical Engineering" year="Year 4"></team-member>
+  <!-- Header Section -->
+  <div class="header">
+    <h1>Project Interim Report VR-407</h1>
+    <p>Enhancing Communication for Non-Verbal MND Patients with AIConnect</p>
   </div>
 
   <!-- Table of Contents -->
-  <sl-details summary="Table of Contents" open>
-    <sl-tree>
-      <sl-tree-item><a href="#chapter-1">Chapter 1: Introduction</a></sl-tree-item>
-      <sl-tree-item><a href="#chapter-2">Chapter 2: Problem Exploration</a></sl-tree-item>
-      <sl-tree-item><a href="#chapter-3">Chapter 3: Solution Focused Target Group</a></sl-tree-item>
-      <sl-tree-item><a href="#chapter-4">Chapter 4: Prototype and Testing</a></sl-tree-item>
-      <sl-tree-item><a href="#chapter-5">Chapter 5: Project Plans</a></sl-tree-item>
-    </sl-tree>
-  </sl-details>
-
-  <!-- Chapter 1: Introduction -->
-  <div id="chapter-1">
-    <sl-details summary="Chapter 1: Introduction">
-      <p>This section describes AAC and its common types. <sup><a href="#ref1">1</a></sup>
-      
-      
-      
-      </p>
+  <div class="table-of-contents">
+    <sl-details summary="Table of Contents" open>
+      <sl-tree>
+        <sl-tree-item><a href="#introduction">1. Introduction</a></sl-tree-item>
+        <sl-tree-item><a href="#problem-exploration">2. Problem Exploration</a></sl-tree-item>
+        <sl-tree-item><a href="#design">3. Design Specifications</a></sl-tree-item>
+        <sl-tree-item><a href="#ai-connect">4. AI Connect - The Solution</a></sl-tree-item>
+        <sl-tree-item><a href="#product-prototyping">5. Product Prototyping</a></sl-tree-item>
+        <sl-tree-item><a href="#shortcomings">6. Shortcomings of Proposed System</a></sl-tree-item>
+        <sl-tree-item><a href="#future-plans">7. Future Plans</a></sl-tree-item>
+        <sl-tree-item><a href="#references">References</a></sl-tree-item>
+      </sl-tree>
     </sl-details>
   </div>
 
-<!-- Chapter 2: Problem Exploration with Tabs -->
-<div id="chapter-2">
-  <sl-details summary="Chapter 2: Problem Exploration, and Chosen Target Group">
-    <p> 
+  <!-- Section 1: Introduction -->
+  <div id="introduction" class="section">
+    <sl-details summary="1. Introduction" open>
+      <p>Non-speaking individuals use Augmentative Alternative Communication (AAC) to communicate with caregivers. AAC interventions have shown benefits, but limitations exist in usability and daily integration.</p>
+      <p>To empathize with the non-speaking community, I partnered with organizations supporting individuals with Autism, Down Syndrome, Dementia, and Motor Neurone Disease. Interviews with speech therapists and teaching staff provided deeper insights into current communication tools, their effectiveness, and suitability for each group.</p>
+    </sl-details>
+  </div>
 
-    </p>
-    <sl-tab-group>
-      <!-- Separate tab for Motor Neurone Disease as the main focus -->
-      <sl-tab slot="nav" panel="mnd">2.1 Motor Neurone Disease (Main Focus)</sl-tab>
+  <!-- Section 2: Problem Exploration -->
+  <div id="problem-exploration" class="section">
+    <sl-details summary="2. Problem Exploration">
+      <p>For the individuals I have met, those with Autism, Down syndrome, and Dementia use low-tech AAC to communicate, while individuals with Motor Neurone Disease use high-tech AAC.</p>
 
-      <!-- Other conditions as additional tabs -->
-      <sl-tab slot="nav" panel="autism">2.2 Autism</sl-tab>
-      <sl-tab slot="nav" panel="down-syndrome">2.3 Down Syndrome</sl-tab>
-      <sl-tab slot="nav" panel="dementia">2.4 Dementia</sl-tab>
+      <sl-details summary="2.1 Communication Tools and Challenges of Different Groups">
+        <p>Exploration of different AAC tools and their challenges in assisting various user groups with communication impairments.</p>
+        
+        <table>
+          <thead>
+            <tr>
+              <th> </th>
+              <th>Autism</th>
+              <th>Down Syndrome</th>
+              <th>Dementia</th>
+              <th>Motor Neurone Disease</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Demographics</strong></td>
+              <td>Non-verbal children aged 6-10 years old</td>
+              <td>Non-verbal adults aged 18-60 years old</td>
+              <td>Non-verbal adults aged above 60 years old</td>
+              <td>Non-verbal adults aged above 30 to 60 years old</td>
+            </tr>
+            <tr>
+              <td><strong>Main Communication Tool</strong></td>
+              <td>Picture Exchange Card System (PECS)</td>
+              <td>Pointing to objects and gestures</td>
+              <td>Gesturing to indicate needs or preferences</td>
+              <td>Eye-Gaze Technology and High-tech AAC</td>
+            </tr>
+            <tr>
+              <td><strong>Challenges</strong></td>
+              <td colspan="3">Low-tech AAC involves guessing to interpret meaning, requires caregiver attention, and frequent prompting.</td>
+              <td>Eye-Gaze technology is challenging in bright environments and can be slow.</td>
+            </tr>
+          </tbody>
+        </table>
 
-      <!-- Content for Motor Neurone Disease tab -->
-      <sl-tab-panel name="mnd">
-        <p>MNDa is run by a group of patients with Motor Neurone Disease (MND) and caregivers, with a mission to enable persons with MND to live in dignity with the best possible quality of life, alongside family, technologies and advocacy with enhanced public awareness. </p>
-      </sl-tab-panel>
-
-      <!-- Content for other conditions -->
-      <sl-tab-panel name="autism">
-        <p>Details about Autism and its challenges...</p>
-      </sl-tab-panel>
-      <sl-tab-panel name="down-syndrome">
-        <p>Information about Down Syndrome and related issues...</p>
-      </sl-tab-panel>
-      <sl-tab-panel name="dementia">
-        <p>Explanation of Dementia and the communication difficulties...</p>
-      </sl-tab-panel>
-    </sl-tab-group>
-  </sl-details>
-</div>
-
-  <!-- Chapter 3: Solution Focused Target Group with Nested Sections -->
-  <div id="chapter-3">
-    <sl-details summary="Chapter 3: Solution Focused Target Group">
-      <p>Big Concept Map</p>
-
-      <!-- Nested Sections for Design Options -->
-      <sl-details summary="3.4 EyeAssist Designs" open>
-        <sl-details summary="3.4.1 Design Specification 1: The Smart Lenses">
-          <p>Details of EyeAssist Design 1...</p>
+        <sl-details summary="2.1.1 Justification of Chosen Target Group">
+          <p>Given their potential to benefit significantly from AI-enhanced AAC, Motor Neurone Disease was chosen as the primary target group.</p>
         </sl-details>
-        <sl-details summary="3.4.2 Design Specification 2">
-          <p>Details of EyeAssist Design 2...</p>
+      </sl-details>
+
+      <sl-details summary="2.2 Needs of Chosen Target Group - Motor Neurone Disease">
+        <p>
+          
+
+
+
+          <table style="width:100%; border-collapse: collapse; margin: 20px 0;">
+            <tr>
+              <th style="border: 2px solid #333; padding: 10px;">Physical Symptoms</th>
+              <td style="border: 2px solid #333; padding: 10px;">
+                <strong>Speech:</strong> Loss of useful speech.<br><br>
+                <strong>Movement:</strong> 
+                <ul>
+                  <li>Complete paralysis, rendering them unable to move any part of their body except for their eyes.</li>
+                </ul>
+                <strong>Sensory:</strong>
+                <ul>
+                  <li>Often felt numb, needed caregivers to help in frequent repositioning.</li>
+                </ul>
+                <strong>Respiratory:</strong>
+                <ul>
+                  <li>Needed frequent swabbing from caregivers due to excessive saliva production, which causes choking when not cleared in a timely manner.</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th style="border: 2px solid #333; padding: 10px;">Mode of Communication</th>
+              <td style="border: 2px solid #333; padding: 10px;">
+                <strong>Indirect Access:</strong> Individuals with MND are unable to access laptops directly.<br><br>
+                They use Eye Gaze Technology, Tobii Eye Tracker 5 to access the keyboard function on their laptop. This is paired with the Microsoft Assistive Keyboard available on their Windows Laptop.
+                <table style="width:100%; margin-top: 15px;">
+                  <tr>
+                    <td style="text-align: center; border: 1px solid #333; padding: 10px;">
+                      <img src="assets/eyegaze 5.png" alt="Tobii Eye Tracker 5" style="display: block; margin: auto; max-width: 200px;">
+                      <p><strong>Eye Gaze Technology Usage:</strong> The Tobii Eye Tracker 5, like many commercial eye-gaze devices, uses Infrared Oculography (IROG). This technology uses infrared light to illuminate the eye and photo detectors to capture the reflection. By measuring reflections from the eyeball and tracking the boundary between the pupil and iris, it calculates eye rotation to determine input. <sup>[1]</sup></p>
+                    </td>
+                    <td style="text-align: center; border: 1px solid #333; padding: 10px;">
+                      <img src="assets/microsoft assitive.png" alt="Microsoft Assistive Keyboard" style="display: block; margin: auto; max-width: 200px;">
+                      <p><strong>Microsoft Assistive Keyboard Usage:</strong><br>
+                        <strong>Dwell Time:</strong> Users can select letters or commands by fixating their gaze on them for a specific duration, allowing hands-free interaction.<br>
+                        <strong>Commonly Typed Words Bar:</strong> The keyboard highlights frequently used words based on user history, increasing typing efficiency.<br>
+                        <strong>Speak Button:</strong> A "Speak" button allows users to have the generated text read aloud by a synthesized voice for effective communication.
+                      </p>
+                    </td>
+                  </tr>
+                </table>
+                <p style="font-size: 0.9em; color: #555; text-align: center;">
+                  A minority of elderly non-verbal patients use picture card systems, focusing on images to communicate preferences. This is due to Microsoft Assistive Keyboard’s lack of dialect support and the elderly’s unfamiliarity with typing, making picture cards a more reliable option.
+                </p>
+              </td>
+            </tr>
+          </table>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </p>
+      </sl-details>
+    </sl-details>
+  </div>
+
+  <!-- Section 3: Design Specifications -->
+  <div id="design" class="section">
+    <sl-details summary="3. Design Specifications">
+      <p>Design problems, value propositions, and product design strategies.</p>
+      
+      <sl-details summary="3.1 Problems to Address">
+        <p>
+
+
+          <div class="section">
+            <h2>Problems to Address</h2>
+            <p>This is the list of problems, due to their physical symptoms and the gap in current Assistive Technology (AT) for the Target Audience (TA):</p>
+            
+            <ol>
+              <li>
+                <p><strong><u>External Factors cause frequent interruption to TA’s communication, causing a high need of recalibration.</u></strong> Most TA’s rely on their caregivers for recalibration on their remote eye tracking system, as the TAs’ eyes are already out of alignment, leading to difficulty for them to navigate to the recalibration page solely using eye movement.</p>
+              </li>
+            </ol>
+            
+            <table style="width:100%; border-collapse: collapse; margin: 20px 0;">
+              <thead>
+                <tr>
+                  <th style="border: 1px solid #333; padding: 10px;">External Factors</th>
+                  <th style="border: 1px solid #333; padding: 10px;">Reason behind why</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="border: 1px solid #333; padding: 10px;">
+                    <strong>Sunlight and lighting changes.</strong> From observations, TA has reported high levels of inaccuracies when typing, outdoors. Reporting a number of 4 in 10 letters per word being mistyped, due to the inaccuracies that arise when typing outdoors.
+                  </td>
+                  <td style="border: 1px solid #333; padding: 10px;">
+                    Sunlight has a critical impact on data captured by the eye tracker as infrared radiation from sunlight can cause corneal reflection signals to be hard to maintain and detect.<sup>[1]</sup><sup>[2]</sup> Additionally, sunlight reflecting off the skin, or eyes into the photo detectors can be mistaken by the eye-tracker as a corneal reflection, causing a reduction in spatial accuracy. <sup>[1]</sup>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="border: 1px solid #333; padding: 10px;">
+                    <strong>Other individuals are within the range of detection.</strong> During observations, it was noted that caregivers were frequently detected within the camera's detection range as they attempted to complete partially composed utterances on the TA's AAC, given their visual access to the device. Similar behavior has been documented in previous studies.<sup>[2]</sup>
+                  </td>
+                  <td style="border: 1px solid #333; padding: 10px;">
+                    Accidental mismeasurements can happen, where the eye tracker senses another pair of eyes. <sup>[1]</sup>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="border: 1px solid #333; padding: 10px;">
+                    <strong>Slight and Major movement of TA from original position.</strong> During observations, TA often had to readjust their positions, as they suffered from numbness at times. Additionally, daily activities such as going to the toilet can cause TA to shift their position.
+                  </td>
+                  <td style="border: 1px solid #333; padding: 10px;">
+                    Research has shown that slight movements in head can also lead to errors in gaze location estimates, leading to inaccuracies and the need for recalibration. <sup>[3]</sup>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            
+            <ol start="2">
+              <li>
+                <p><strong><u>Slow communication by TA as TA tends to mistype letters occasionally.</u></strong> This is due to the natural, rapid movements of the eyes called saccades, as well as eye drifts—small, involuntary shifts away from the fixation point—causing errors with fixations to select a particular letter.<sup>[2]</sup></p>
+                <p>Additionally, eye trackers exhibit systematic errors, the disparity between the average gazepoint location and actual fixation by TA, causing a lack in accuracy. Eye movement data is inherently noisy, causing the calibration to deteriorate over the course of use per time. <sup>[1]</sup></p>
+              </li>
+              <li>
+                <p><strong><u>Eye fatigue experienced by TA while communicating.</u></strong></p>
+                <p>Eye fatigue experienced is commonly misattributed to tired ocular muscles, when it is in fact the result of tired eyelid muscles, with our ocular muscles being strong and precise. <sup>[1]</sup> As such, user-friendly interfaces should be utilized to combat eye fatigue, such as using screens of darker shades, and having shorter gaze durations (dwell times).</p>
+              </li>
+            </ol>
+          </div>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </p>
+      </sl-details>
+
+      <sl-details summary="3.2 Value Proposition">
+        <p>The proposed product aims to provide real-time communication, reliable calibration, and increased independence.</p>
+      </sl-details>
+
+      <sl-details summary="3.3 Product Design Strategy">
+        <sl-details summary="3.3.1 Design Statement and Specification">
+          <p>This project aims to create a user-friendly, reliable, and efficient AAC solution for MND patients.</p>
         </sl-details>
-        <sl-details summary="3.4.3 Design Specification 3">
-          <p>Details of EyeAssist Design 3...</p>
+
+        <sl-details summary="3.3.2 Current Market Alternatives">
+          <p>Evaluation of existing solutions, specifically focusing on WaveTalk and Proloquo2go.</p>
+
+          <table>
+            <thead>
+              <tr>
+                <th>Factors</th>
+                <th>WaveTalk</th>
+                <th>Proloquo2go</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Ergonomic Features</td>
+                <td>AI AutoCompletion, Symbol-Based AAC, Word Prediction</td>
+                <td>Symbol-Based AAC, Word Prediction, Pause Button</td>
+              </tr>
+              <tr>
+                <td>Emergency Functions</td>
+                <td>Moderate - Includes SOS Button</td>
+                <td>Low - No features</td>
+              </tr>
+              <tr>
+                <td>Real-Time Interaction</td>
+                <td>Camera and Location-Based Recommender</td>
+                <td>Camera-Based Recommender</td>
+              </tr>
+            </tbody>
+          </table>
         </sl-details>
       </sl-details>
     </sl-details>
   </div>
 
-  <!-- Chapter 4: Prototype and Testing -->
-  <div id="chapter-4">
-    <sl-details summary="Chapter 4: Prototype and Testing">
-      <p>Details of the prototyping and testing phases...</p>
+  <!-- Section 4: AI Connect - The Solution -->
+  <div id="ai-connect" class="section">
+    <sl-details summary="4. AI Connect - The Solution">
+      <p>Introduction to EyeAssist and WaveTalk 2.0, designed to enhance AAC for MND patients.</p>
+      <sl-details summary="4.2.1 Current Features adapted from WaveTalk 1.0">
+        <p>Features from WaveTalk 1.0 retained in WaveTalk 2.0.</p>
+      </sl-details>
+      <sl-details summary="4.2.2 Modified Features for MND Patients">
+        <p>Modifications in WaveTalk 2.0 to better meet MND patients’ needs.</p>
+      </sl-details>
     </sl-details>
   </div>
 
-  <!-- Chapter 5: Project Plans -->
-  <div id="chapter-5">
-    <sl-details summary="Chapter 5: Project Plans">
-      <p>Outline of the project plans, phases, and roadmaps...</p>
+  <!-- Section 5: Product Prototyping -->
+  <div id="product-prototyping" class="section">
+    <sl-details summary="5. Product Prototyping">
+      <p>Functionality testing, lighting conditions, and image algorithm optimizations.</p>
     </sl-details>
   </div>
-<!-- Reference List at the Bottom -->
-<div id="references">
-  <h3>References</h3>
-  <ol>
-    <li id="ref1">Smith, J. "Motor Neurone Disease and Communication." Journal of Health, 2023.</li>
-    <li id="ref2">Doe, A. "Assistive Technologies for Communication." Tech Journal, 2022.</li>
 
-  </ol>
-</div>
+  <!-- Section 6: Shortcomings of Proposed System -->
+  <div id="shortcomings" class="section">
+    <sl-details summary="6. Shortcomings of Proposed System">
+      <p>Discussion of limitations and areas for improvement in the proposed solution.</p>
+    </sl-details>
+  </div>
+
+  <!-- Section 7: Future Plans -->
+  <div id="future-plans" class="section">
+    <sl-details summary="7. Future Plans">
+      <sl-details summary="7.1 Detailed Planning for Phases">
+        <p>Outline of development phases with goals and objectives.</p>
+      </sl-details>
+      <sl-details summary="7.2 Stipulated Timeline">
+        <p>Timeline for each phase for a structured project progression.</p>
+      </sl-details>
+    </sl-details>
+  </div>
+
+  <!-- References -->
+  <div id="references" class="section">
+    <h3>References</h3>
+    <ol>
+      <li>Smith, J. "Motor Neurone Disease and Communication." Journal of Health, 2023.</li>
+      <li>Doe, A. "Assistive Technologies for Communication." Tech Journal, 2022.</li>
+    </ol>
+  </div>
 
 </body>
 </html>
