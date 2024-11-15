@@ -305,38 +305,254 @@
 
       <sl-details summary="3.3 Product Design Strategy">
         <sl-details summary="3.3.1 Design Statement and Specification">
-          <p>This project aims to create a user-friendly, reliable, and efficient AAC solution for MND patients.</p>
+          <p>
+            
+
+
+
+
+
+
+            <table style="width:100%; border-collapse: collapse; margin: 20px 0;">
+              <thead>
+                <tr>
+                  <th style="background-color: #2d70b3; color: white; font-weight: bold; padding: 10px;">Insights</th>
+                  <th style="background-color: #2d70b3; color: white; font-weight: bold; padding: 10px;">Needs</th>
+                  <th style="background-color: #2d70b3; color: white; font-weight: bold; padding: 10px;">Functional Requirements of Assistive Technology</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="border: 1px solid #333; padding: 10px;">TA often mentioned <strong>Eye Fatigue</strong>, attributing it to using the eye-gaze technology</td>
+                  <td style="border: 1px solid #333; padding: 10px;">TA <strong>needs</strong> to have a <strong>comfortable and User-Friendly Interface</strong></td>
+                  <td style="border: 1px solid #333; padding: 10px;">The AAC Application should minimize eye fatigue by offering <strong>ergonomic design features</strong>.</td>
+                </tr>
+                <tr>
+                  <td style="border: 1px solid #333; padding: 10px;">TA often had to <strong>retype their words</strong>, as they are unable to accurately select the letter that they want.</td>
+                  <td style="border: 1px solid #333; padding: 10px;">TA <strong>needs</strong> more precise selection capability and minimized error rates.</td>
+                  <td style="border: 1px solid #333; padding: 10px;">The AT should include enhanced tracking precision and error correction features to minimize retyping and improve efficiency. Additionally, predictive text capabilities should be included to speed up typing.</td>
+                </tr>
+                <tr>
+                  <td style="border: 1px solid #333; padding: 10px;">TA wants to comment on <strong>their surroundings</strong> especially when they are outdoors, but are not able to do it in <strong>real-time</strong></td>
+                  <td style="border: 1px solid #333; padding: 10px;">TA <strong>needs</strong> to have efficient real-time interaction, especially outdoors.</td>
+                  <td style="border: 1px solid #333; padding: 10px;">The AAC application should provide users with easily accessible words about their surroundings, enabling effective real-time communication about their surroundings.</td>
+                </tr>
+                <tr>
+                  <td style="border: 1px solid #333; padding: 10px;">External factors such as lighting conditions, gaze of others, and movement frequently interrupt TA's communication, leading to a high need for recalibration.</td>
+                  <td style="border: 1px solid #333; padding: 10px;">TA <strong>needs</strong> an eye-gaze detector that is resilient against external factors.</td>
+                  <td style="border: 1px solid #333; padding: 10px;">The input device should be resistant to external environmental factors like changes in lighting, and minimize the need for frequent recalibration.</td>
+                </tr>
+                <tr>
+                  <td style="border: 1px solid #333; padding: 10px;">TA often had <strong>emergency situations</strong> that required the attention of caregivers, but were unable to communicate it in a <strong>timely manner</strong></td>
+                  <td style="border: 1px solid #333; padding: 10px;">TA <strong>needs</strong> a way to efficiently communicate in urgent situations.</td>
+                  <td style="border: 1px solid #333; padding: 10px;">The AAC Application should allow for quick and reliable communication during emergencies, incorporating shortcuts or a dedicated "SOS" command to alert caregivers promptly.</td>
+                </tr>
+                <tr>
+                  <td style="border: 1px solid #333; padding: 10px;">TA had <strong>slow communication</strong> with others.</td>
+                  <td style="border: 1px solid #333; padding: 10px;">TA <strong>needs</strong> a way to increase the speed of sentence generation on their AAC</td>
+                  <td style="border: 1px solid #333; padding: 10px;">The AAC Application should allow for the quick formation of sentences based on a few contextual words, removing the need for manual selection of every word.</td>
+                </tr>
+              </tbody>
+            </table>
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+          </p>
         </sl-details>
 
         <sl-details summary="3.3.2 Current Market Alternatives">
           <p>Evaluation of existing solutions, specifically focusing on WaveTalk and Proloquo2go.</p>
 
-          <table>
+          
+
+
+
+
+
+
+          <table style="width:100%; border-collapse: collapse; font-family: Arial, sans-serif; margin-top: 20px;">
             <thead>
               <tr>
-                <th>Factors</th>
-                <th>WaveTalk</th>
-                <th>Proloquo2go</th>
+                <th style="border: 1px solid #333; background-color: #337ab7; color: white; padding: 10px; width: 30%;">Factors</th>
+                <th style="border: 1px solid #333; background-color: #4CAF50; color: white; padding: 10px; width: 35%;">WaveTalk</th>
+                <th style="border: 1px solid #333; background-color: #FFD700; color: white; padding: 10px; width: 35%;">Proloquo2go</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>Ergonomic Features</td>
-                <td>AI AutoCompletion, Symbol-Based AAC, Word Prediction</td>
-                <td>Symbol-Based AAC, Word Prediction, Pause Button</td>
+                <td style="border: 1px solid #333; padding: 10px; vertical-align: top; font-weight: bold;">
+                  Ergonomic Features to minimize Eye Fatigue
+                </td>
+                <td style="border: 1px solid #333; padding: 10px; background-color: #e1f3df; vertical-align: top;">
+                  <p><strong>High</strong></p>
+                  <hr style="border: 1px solid #333;">
+                  <p>WaveTalk has features such as:</p>
+                  <ul style="margin: 0; padding-left: 20px;">
+                    <li><strong>AI AutoCompletion and Smart Language System:</strong> Helps TA form sentences based on few contextual words with OpenAI.</li>
+                    <li><strong>Symbol-Based AAC:</strong> Reduces the need of typing words letter by letter.</li>
+                    <li><strong>Word Prediction Capabilities:</strong> Quick access to commonly used words.</li>
+                  </ul>
+                </td>
+                <td style="border: 1px solid #333; padding: 10px; background-color: #fffacd; vertical-align: top;">
+                  <p><strong>Moderate</strong></p>
+                  <hr style="border: 1px solid #333;">
+                  <p>Proloquo2go has features such as:</p>
+                  <ul style="margin: 0; padding-left: 20px;">
+                    <li><strong>Symbol-Based AAC:</strong> Reduces the need of typing words letter by letter.</li>
+                    <li><strong>Word Prediction Capabilities:</strong> Quick access to commonly used words.</li>
+                    <li><strong>Easily Accessible Pause Button:</strong> Helps users with MND to pause eye-tracking temporarily, enabling them to survey the screen without unintentionally selecting items, providing more control and reducing errors in navigation.</li>
+                  </ul>
+                </td>
               </tr>
               <tr>
-                <td>Emergency Functions</td>
-                <td>Moderate - Includes SOS Button</td>
-                <td>Low - No features</td>
+                <td style="border: 1px solid #333; padding: 10px; vertical-align: top; font-weight: bold;">
+                  Emergency Functions for Timely Alerting
+                </td>
+                <td style="border: 1px solid #333; padding: 10px; background-color: #FFE4B5; vertical-align: top;">
+                  <p><strong>Moderate</strong></p>
+                  <hr style="border: 1px solid #333;">
+                  <p>WaveTalk has features such as:</p>
+                  <ul style="margin: 0; padding-left: 20px;">
+                    <li><strong>Emergency SOS Button:</strong> Provides TA with a quick-access feature to call emergency hotlines, such as an ambulance, during critical situations. Activating the button immediately connects to emergency services, ensuring timely assistance when needed.</li>
+                  </ul>
+                </td>
+                <td style="border: 1px solid #333; padding: 10px; background-color: #FA8072; vertical-align: top;">
+                  <p><strong>Low</strong></p>
+                  <hr style="border: 1px solid #333;">
+                  <p>No features currently.</p>
+                </td>
               </tr>
               <tr>
-                <td>Real-Time Interaction</td>
-                <td>Camera and Location-Based Recommender</td>
-                <td>Camera-Based Recommender</td>
+                <td style="border: 1px solid #333; padding: 10px; vertical-align: top; font-weight: bold;">
+                  Real-Time Interaction
+                </td>
+                <td style="border: 1px solid #333; padding: 10px; background-color: #e1f3df; vertical-align: top;">
+                  <p><strong>High</strong></p>
+                  <hr style="border: 1px solid #333;">
+                  <p>WaveTalk has features such as:</p>
+                  <ul style="margin: 0; padding-left: 20px;">
+                    <li><strong>Camera-based Recommender:</strong> Allows TA to capture surroundings and receive word suggestions through object detection.</li>
+                    <li><strong>Location-based Recommender:</strong> Allows tracking of TA's current location and provides word suggestions accordingly.</li>
+                  </ul>
+                </td>
+                <td style="border: 1px solid #333; padding: 10px; background-color: #fffacd; vertical-align: top;">
+                  <p><strong>Moderate</strong></p>
+                  <hr style="border: 1px solid #333;">
+                  <p>Proloquo2go has features such as:</p>
+                  <ul style="margin: 0; padding-left: 20px;">
+                    <li><strong>Camera-based Recommender:</strong> Allows TA to capture surroundings and receive word suggestions through object detection.</li>
+                  </ul>
+                </td>
               </tr>
             </tbody>
           </table>
+          
+
+          <table style="width:100%; border-collapse: collapse; font-family: Arial, sans-serif; margin-top: 20px;">
+            <thead>
+              <tr>
+                <th rowspan="2" style="border: 1px solid #333; background-color: #337ab7; color: white; padding: 10px; width: 20%;">Factors</th>
+                <th colspan="2" style="border: 1px solid #333; background-color: #337ab7; color: white; padding: 10px; text-align: center;">The assistive technology (AT) should reduce external interruptions, and the need for recalibration caused by the surroundings.</th>
+              </tr>
+              <tr>
+                <th style="border: 1px solid #333; background-color: #FFD700; color: white; padding: 10px; width: 40%;">Tobii PCEye</th>
+                <th style="border: 1px solid #333; background-color: #4CAF50; color: white; padding: 10px; width: 40%;">Tobii Eyeglasses 3</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="border: 1px solid #333; padding: 10px; vertical-align: top;">
+                  <table style="width: 100%;">
+                    <tr>
+                      <td style="border-bottom: 1px solid #333; padding: 5px;"><strong>Sunlight Resistance</strong></td>
+                    </tr>
+                    <tr>
+                      <td style="padding: 5px;"><strong>Detection Interference</strong></td>
+                    </tr>
+                    <tr>
+                      <td style="border-top: 1px solid #333; padding: 5px;"><strong>Calibration Stability</strong></td>
+                    </tr>
+                  </table>
+                </td>
+                <td style="border: 1px solid #333; padding: 10px; background-color: #fffacd; vertical-align: top;">
+                  <p><strong>Sunlight Resistance</strong>: Limited</p>
+                  <p style="margin-top: 0;">For both Tobii PCEye and Tobii Eyeglasses 3, though they can be used in outdoor settings, the need for recalibration is high according to interviews with users.</p>
+                </td>
+                <td style="border: 1px solid #333; padding: 10px; background-color: #fffacd; vertical-align: top;">
+                  <p><strong>Sunlight Resistance</strong>: Limited</p>
+                  <p style="margin-top: 0;">For both Tobii PCEye and Tobii Eyeglasses 3, though they can be used in outdoor settings, the need for recalibration is high according to interviews with users.</p>
+                </td>
+              </tr>
+              <tr>
+                <td style="border: 1px solid #333; padding: 10px; vertical-align: top;"></td>
+                <td style="border: 1px solid #333; padding: 10px; background-color: #FA8072; vertical-align: top;">
+                  <p><strong>High</strong></p>
+                  <hr style="border: 1px solid #333; margin: 5px 0;">
+                  <ul style="margin: 0; padding-left: 20px;">
+                    <li>Fixed position for eye tracking</li>
+                    <li>More prone to detect unintended objects within its field of view</li>
+                    <li>Susceptible to interference from movements by people or objects nearby</li>
+                  </ul>
+                </td>
+                <td style="border: 1px solid #333; padding: 10px; background-color: #e1f3df; vertical-align: top;">
+                  <p><strong>Low</strong></p>
+                  <hr style="border: 1px solid #333; margin: 5px 0;">
+                  <ul style="margin: 0; padding-left: 20px;">
+                    <li>Follows the user's head movements</li>
+                    <li>Focuses on the user's intended gaze direction</li>
+                    <li>Reduces chances of detecting unintended objects</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td style="border: 1px solid #333; padding: 10px; vertical-align: top;"></td>
+                <td style="border: 1px solid #333; padding: 10px; background-color: #e1f3df; vertical-align: top;">
+                  <p><strong>Low</strong></p>
+                  <hr style="border: 1px solid #333; margin: 5px 0;">
+                  <ul style="margin: 0; padding-left: 20px;">
+                    <li>Does not move in sync with user’s head; slight movement can misalign eyes relative to the tracker</li>
+                    <li>Higher potential of inaccuracies and apparent shifts in gaze direction</li>
+                  </ul>
+                </td>
+                <td style="border: 1px solid #333; padding: 10px; background-color: #FA8072; vertical-align: top;">
+                  <p><strong>High</strong></p>
+                  <hr style="border: 1px solid #333; margin: 5px 0;">
+                  <ul style="margin: 0; padding-left: 20px;">
+                    <li>Moves in sync with the user's head</li>
+                    <li>Maintains a consistent relative position between the eyes and the tracker</li>
+                    <li>Reduces potential inaccuracies and apparent shifts in gaze direction <sup>[1]</sup></li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          
+          <p style="text-align: center; font-style: italic; font-size: 0.9em; margin-top: 20px;">
+            As such, with a higher calibration safety, and lower detection interference, Tobii Eyeglasses 3, a wearable eye-gaze tracker, can lead to a smaller need for recalibration for TA.
+          </p>
+          
+
+
+
+
+
+
+
+
+          
         </sl-details>
       </sl-details>
     </sl-details>
