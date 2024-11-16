@@ -54,6 +54,42 @@
     td {
       white-space: pre-line;
     }
+     /* Team Member Section */
+    .team-section {
+      text-align: center;
+      margin-top: 50px;
+    }
+    .team-container {
+      display: flex;
+      justify-content: center;
+    }
+    .team-member {
+      width: 250px;
+    margin: 20px;
+    min-height: 300px; /* Set a minimum height for the card */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    }
+    .team-member img {
+      display: block;
+      margin: 0 auto;
+      border-radius: 50%;
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+    }
+    /* Compact Reference List */
+    #references ol {
+      padding-left: 20px;
+    }
+    
+    #references ol li {
+      font-size: 14px; /* Reduced font size */
+      line-height: 1.3; /* Decreased line spacing */
+      margin-bottom: 5px; /* Less space between items */
+    }
   </style>
 </head>
 <body>
@@ -63,7 +99,17 @@
     <h1>Project Interim Report VR-407</h1>
     <p>Enhancing Communication for Non-Verbal MND Patients with AIConnect</p>
   </div>
-
+<!-- Team Member Section -->
+<div class="team-section">
+  <h2>Team Member</h2>
+  <div class="team-container">
+    <sl-card class="team-member">
+      <img src="assets/ID.jpg" alt="Ho Jia En Crystal" slot="image">
+      <strong>Ho Jia En Crystal</strong>
+      <p>Y4 Biomedical Engineering, Second Major Data Analytics</p>
+    </sl-card>
+  </div>
+</div>
   <!-- Table of Contents -->
   <div class="table-of-contents">
     <sl-details summary="Table of Contents" open>
@@ -83,61 +129,116 @@
   <!-- Section 1: Introduction -->
   <div id="introduction" class="section">
     <sl-details summary="1. Introduction" open>
-      <p>Non-speaking individuals use Augmentative Alternative Communication (AAC) to communicate with caregivers. AAC interventions have shown benefits, but limitations exist in usability and daily integration.</p>
-      <p>To empathize with the non-speaking community, I partnered with organizations supporting individuals with Autism, Down Syndrome, Dementia, and Motor Neurone Disease. Interviews with speech therapists and teaching staff provided deeper insights into current communication tools, their effectiveness, and suitability for each group.</p>
+      <p>Non-speaking is a way to classify those who are not able to use spoken language to communicate. Typically, the non-speaking individuals use Augmentative Alternative Communication (AAC) to communicate with their caregivers.
+      </p>
+
+      <p>AAC usage has shown to be beneficial for non-speaking groups. For those with developmental disabilities, AAC intervention led to 89% of them demonstrating gains in speech production. <sup> 1 </sup> On the other hand, AAC methods have also shown to improve the quality of lives for patients with voice loss. <sup>2</sup> 
+      </p>
+
+      <p>
+        While the usage of AAC is certainly beneficial for non-speaking groups, research has shown that caregivers and non-speaking individuals still face issues with AAC use, citing usability and integration issues in their daily lives.<sup>3</sup>
+        
+      </p>
+
+      <p>
+        To empathize with the non-speaking community, I partnered with organizations supporting individuals with Autism, Down Syndrome, Dementia, and Motor Neurone Disease. Interviews with speech therapists and teaching staff provided deeper insights into current communication tools, their effectiveness, and suitability for each group. This approach helped identify strengths and limitations of existing AAC tools, guiding potential improvements.
+        
+      </p>
+
     </sl-details>
   </div>
 
   <!-- Section 2: Problem Exploration -->
   <div id="problem-exploration" class="section">
     <sl-details summary="2. Problem Exploration">
-      <p>For the individuals I have met, those with Autism, Down syndrome, and Dementia use low-tech AAC to communicate, while individuals with Motor Neurone Disease use high-tech AAC.</p>
+      <p> The non-speaking individuals use different forms of AAC to communicate, ranging from low-tech AAC modalities such as Picture Exchange Card Systems (PECs) to high-tech AAC modalities such as using Application-Based AAC on their device.
+
+
+
+      </p>
 
       <sl-details summary="2.1 Communication Tools and Challenges of Different Groups">
-        <p>Exploration of different AAC tools and their challenges in assisting various user groups with communication impairments.</p>
+        <p> During observations, the communication tools and challenges that each different non-speaking group was noted in the table below. 
+          </p>
         
-        <table>
-          <thead>
-            <tr>
-              <th> </th>
-              <th>Autism</th>
-              <th>Down Syndrome</th>
-              <th>Dementia</th>
-              <th>Motor Neurone Disease</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>Demographics</strong></td>
-              <td>Non-verbal children aged 6-10 years old</td>
-              <td>Non-verbal adults aged 18-60 years old</td>
-              <td>Non-verbal adults aged above 60 years old</td>
-              <td>Non-verbal adults aged above 30 to 60 years old</td>
-            </tr>
-            <tr>
-              <td><strong>Main Communication Tool</strong></td>
-              <td>Picture Exchange Card System (PECS)</td>
-              <td>Pointing to objects and gestures</td>
-              <td>Gesturing to indicate needs or preferences</td>
-              <td>Eye-Gaze Technology and High-tech AAC</td>
-            </tr>
-            <tr>
-              <td><strong>Challenges</strong></td>
-              <td colspan="3">Low-tech AAC involves guessing to interpret meaning, requires caregiver attention, and frequent prompting.</td>
-              <td>Eye-Gaze technology is challenging in bright environments and can be slow.</td>
-            </tr>
-          </tbody>
-        </table>
+          <table>
+            <thead>
+              <tr>
+                <th></th>
+                <th>Autism</th>
+                <th>Down Syndrome</th>
+                <th>Dementia</th>
+                <th>Motor Neurone Disease</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Demographics</strong></td>
+                <td>Non-verbal children aged 6-10 years old</td>
+                <td>Non-verbal adults aged 18-60 years old</td>
+                <td>Non-verbal adults aged above 60 years old</td>
+                <td>Non-verbal adults aged 30 to 60 years old</td>
+              </tr>
+              <tr>
+                <td><strong>Main Communication Tool</strong></td>
+                <td>Picture Exchange Card System (PECS).<br>PECS consists of laminated picture cards with images or symbols, often organized in a Velcro binder, allowing users to select and exchange cards to communicate needs and wants.</td>
+                <td>Pointing to objects and using gestures to express themselves.</td>
+                <td>Gesturing to indicate needs or preferences.</td>
+                <td>Eye-Gaze Technology and High-tech AAC, a speech-generating device.</td>
+              </tr>
+              <tr>
+                <td><strong>How the communication tool is used</strong></td>
+                <td>By pointing at symbols or pictures to communicate specific wants or needs.</td>
+                <td>Pointing to objects or using gestures to express what they need or to communicate with others.</td>
+                <td>Users make hand gestures or other non-verbal actions to convey emotions, needs, or preferences.</td>
+                <td>Eye-Gaze technology is used to select words or symbols by moving their eyes to control the device.</td>
+              </tr>
+              <tr>
+                <td><strong>Challenges with the communication tool</strong></td>
+                <td colspan="3">Using low-tech AAC often involves a significant amount of guessing to interpret what the target audience (TA) wants to convey. Furthermore, it requires considerable caregiver attention and frequent prompting.</td>
+                <td>Eye-Gaze technology can be challenging in bright environments or where precise control is needed. While it is generally easy for caregivers to understand, the speed of communication can be slow.</td>
+              </tr>
+            </tbody>
+          </table>
+          
+          
 
         <sl-details summary="2.1.1 Justification of Chosen Target Group">
-          <p>Given their potential to benefit significantly from AI-enhanced AAC, Motor Neurone Disease was chosen as the primary target group.</p>
+          <p>Although low-tech AAC seems often slower and less effective compared to high-tech AAC, interviews with speech therapists highlighted that the choice of communication tool largely depends on personal suitability and preference. 
+
+
+          </p>
+
+
+          
+          <p>
+            Therefore, I chose Motor Neurone Disease as the primary target group, given their potential to benefit significantly from AI-enhanced AAC and their dissatisfaction with current tools.
+
+
+
+          </p>
         </sl-details>
       </sl-details>
 
       <sl-details summary="2.2 Needs of Chosen Target Group - Motor Neurone Disease">
+        <p> Motor Neurone Disease (MND) is the degeneration of motor neurons, leading to muscle weakness and eventual paralysis.<sup>4</sup>
+          Physical impediments that these individuals experience make it difficult to control non-verbal communication such as body positioning, gesturing and touching. Due to muscle weaknesses, their facial expressions can also be difficult to interpret correctly.<sup>5</sup>
+          Additionally, up to 90% of individuals with MND suffer from Bulbar Motor Deterioration, leading to the eventual impairment of speech and swallowing functions, rendering most MND patients with the need to use AAC as a communication tool. <sup>6</sup>
+        </p>
         <p>
-          
 
+
+        </p>
+        <p>
+          To clarify the needs of individuals with Motor Neurone Disease (MND), I visited Motor Neurone Disease Association (MNDa), serving individuals from early to late stages of MND.
+
+          <p>I visited two individuals who were in the late stage of MND, and observed how they interacted with their high-tech AAC tool. Both of them have speech function 0 (loss of useful speech) based on the ALS Functional Rating Scale (ALSFRS).<sup>7</sup>
+          They also have a handwriting function of 0 and are both unable to grip a pen, limiting their ability to communicate. 
+        </p>
+        <p>
+
+          Thus, our Target Audience (TA) rely solely on a high tech AAC for communication to their caregivers.
+        </p>
 
 
           <table style="width:100%; border-collapse: collapse; margin: 20px 0;">
@@ -162,13 +263,14 @@
             <tr>
               <th style="border: 2px solid #333; padding: 10px;">Mode of Communication</th>
               <td style="border: 2px solid #333; padding: 10px;">
-                <strong>Indirect Access:</strong> Individuals with MND are unable to access laptops directly.<br><br>
-                They use Eye Gaze Technology, Tobii Eye Tracker 5 to access the keyboard function on their laptop. This is paired with the Microsoft Assistive Keyboard available on their Windows Laptop.
+                <strong>Indirect Access:</strong> Individuals with MND are unable to access the Microsoft Assistive Keyboards on their laptops directly.<br><br>
+                In order to access the Microsoft Assistive Keyboard on their laptop, they use Eye Gaze Technology, Tobii Eye Tracker 5.
                 <table style="width:100%; margin-top: 15px;">
                   <tr>
                     <td style="text-align: center; border: 1px solid #333; padding: 10px;">
                       <img src="assets/eyegaze 5.png" alt="Tobii Eye Tracker 5" style="display: block; margin: auto; max-width: 200px;">
-                      <p><strong>Eye Gaze Technology Usage:</strong> The Tobii Eye Tracker 5, like many commercial eye-gaze devices, uses Infrared Oculography (IROG). This technology uses infrared light to illuminate the eye and photo detectors to capture the reflection. By measuring reflections from the eyeball and tracking the boundary between the pupil and iris, it calculates eye rotation to determine input. <sup>[1]</sup></p>
+                      <p><strong>Eye Gaze Technology Usage:</strong> 
+                      </p> <p>The Tobii Eye Tracker 5, like many commercial eye-gaze devices, uses Infrared Oculography (IROG). This technology uses infrared light to illuminate the eye and photo detectors to capture the reflection. By measuring reflections from the eyeball and tracking the boundary between the pupil and iris, it calculates eye rotation to determine input into the Microsoft Assistive Keyboard. <sup>8</sup></p>
                     </td>
                     <td style="text-align: center; border: 1px solid #333; padding: 10px;">
                       <img src="assets/microsoft assitive.png" alt="Microsoft Assistive Keyboard" style="display: block; margin: auto; max-width: 200px;">
@@ -214,19 +316,28 @@
   <!-- Section 3: Design Specifications -->
   <div id="design" class="section">
     <sl-details summary="3. Design Specifications">
-      <p>Design problems, value propositions, and product design strategies.</p>
+      <p>
+        This project aims to design an Assistive Technology (AT) that leverages on Target Audiences’ (TA) physical and cognitive ability, to perform reliable, real-time and effective communication, even in challenging surroundings.
+
+                
+        
+        
+
+
+
+      </p>
       
       <sl-details summary="3.1 Problems to Address">
         <p>
 
 
           <div class="section">
-            <h2>Problems to Address</h2>
+            
             <p>This is the list of problems, due to their physical symptoms and the gap in current Assistive Technology (AT) for the Target Audience (TA):</p>
             
             <ol>
               <li>
-                <p><strong><u>External Factors cause frequent interruption to TA’s communication, causing a high need of recalibration.</u></strong> Most TA’s rely on their caregivers for recalibration on their remote eye tracking system, as the TAs’ eyes are already out of alignment, leading to difficulty for them to navigate to the recalibration page solely using eye movement.</p>
+                <p><strong><u>External Factors causes a high need of recalibration, leading to frequent interruption to TA’s communication. </u></strong> Most TA’s rely on their caregivers for recalibration on their remote eye tracking system. As TAs’ eyes are already out of alignment, there is great difficulty for them to navigate to the recalibration page solely using eye movement.</p>
               </li>
             </ol>
             
@@ -240,26 +351,29 @@
               <tbody>
                 <tr>
                   <td style="border: 1px solid #333; padding: 10px;">
-                    <strong>Sunlight and lighting changes.</strong> From observations, TA has reported high levels of inaccuracies when typing, outdoors. Reporting a number of 4 in 10 letters per word being mistyped, due to the inaccuracies that arise when typing outdoors.
+                    <strong>Sunlight and lighting changes.</strong>
+                    </p>From observations, TA has reported high levels of inaccuracies when typing when they are outdoors. They reported that 4 in 10 letters per word were mistyped, due to the inaccuracies that arise when typing outdoors.
                   </td>
                   <td style="border: 1px solid #333; padding: 10px;">
-                    Sunlight has a critical impact on data captured by the eye tracker as infrared radiation from sunlight can cause corneal reflection signals to be hard to maintain and detect.<sup>[1]</sup><sup>[2]</sup> Additionally, sunlight reflecting off the skin, or eyes into the photo detectors can be mistaken by the eye-tracker as a corneal reflection, causing a reduction in spatial accuracy. <sup>[1]</sup>
-                  </td>
-                </tr>
-                <tr>
-                  <td style="border: 1px solid #333; padding: 10px;">
-                    <strong>Other individuals are within the range of detection.</strong> During observations, it was noted that caregivers were frequently detected within the camera's detection range as they attempted to complete partially composed utterances on the TA's AAC, given their visual access to the device. Similar behavior has been documented in previous studies.<sup>[2]</sup>
-                  </td>
-                  <td style="border: 1px solid #333; padding: 10px;">
-                    Accidental mismeasurements can happen, where the eye tracker senses another pair of eyes. <sup>[1]</sup>
+                    Sunlight has a critical impact on data captured by the eye tracker as the infrared radiation from sunlight can cause corneal reflection signals to be hard to maintain and detect.<sup>9,10</sup> Additionally, sunlight reflecting off the skin, or eyes into the photo detectors can be mistaken by the eye-tracker as a corneal reflection, causing a reduction in spatial accuracy. <sup>10</sup>
                   </td>
                 </tr>
                 <tr>
                   <td style="border: 1px solid #333; padding: 10px;">
-                    <strong>Slight and Major movement of TA from original position.</strong> During observations, TA often had to readjust their positions, as they suffered from numbness at times. Additionally, daily activities such as going to the toilet can cause TA to shift their position.
+                    <strong>Other individuals are within the range of detection.</strong> 
+                    During observations, it was noted that caregivers were frequently detected within the camera's detection range as they attempted to complete partially composed utterances on the TA's AAC, given their visual access to the device. Similar behavior has been documented in previous studies.<sup>12</sup>
                   </td>
                   <td style="border: 1px solid #333; padding: 10px;">
-                    Research has shown that slight movements in head can also lead to errors in gaze location estimates, leading to inaccuracies and the need for recalibration. <sup>[3]</sup>
+                    Accidental mismeasurements can happen, where the eye tracker senses another pair of eyes. <sup>10</sup>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="border: 1px solid #333; padding: 10px;">
+                    <strong>Slight and Major movement of TA from original position.</strong>
+                     During observations, TA often had to readjust their positions, as they suffered from numbness at times. Additionally, daily activities such as going to the toilet can cause TA to shift their position.
+                  </td>
+                  <td style="border: 1px solid #333; padding: 10px;">
+                    Research has shown that slight movements in head can also lead to errors in gaze location estimates, leading to inaccuracies and the need for recalibration. <sup>13</sup>
                   </td>
                 </tr>
               </tbody>
@@ -267,12 +381,13 @@
             
             <ol start="2">
               <li>
-                <p><strong><u>Slow communication by TA as TA tends to mistype letters occasionally.</u></strong> This is due to the natural, rapid movements of the eyes called saccades, as well as eye drifts—small, involuntary shifts away from the fixation point—causing errors with fixations to select a particular letter.<sup>[2]</sup></p>
-                <p>Additionally, eye trackers exhibit systematic errors, the disparity between the average gazepoint location and actual fixation by TA, causing a lack in accuracy. Eye movement data is inherently noisy, causing the calibration to deteriorate over the course of use per time. <sup>[1]</sup></p>
+                <p><strong><u>Slow communication by TA as TA tends to mistype letters occasionally.</u></strong> This is due to the natural, rapid movements of the eyes called saccades, as well as eye drifts—small, involuntary shifts away from the fixation point—causing errors with fixations to select a particular letter.<sup>8</sup></p>
+                <p>Additionally, inaccuracies in typing can occur due to the eye trackers as well. Eye trackers exhibit systematic errors, the disparity between the average gazepoint location and actual fixation by TA, causing a lack in accuracy. Additionally, eye movement data is inherently noisy, causing the calibration to deteriorate over the course of use per time. <sup>13</sup></p>
               </li>
               <li>
                 <p><strong><u>Eye fatigue experienced by TA while communicating.</u></strong></p>
-                <p>Eye fatigue experienced is commonly misattributed to tired ocular muscles, when it is in fact the result of tired eyelid muscles, with our ocular muscles being strong and precise. <sup>[1]</sup> As such, user-friendly interfaces should be utilized to combat eye fatigue, such as using screens of darker shades, and having shorter gaze durations (dwell times).</p>
+                <p>TA mentioned eye fatigue to be a great problem that they face. However, research has shown that eye fatigue experienced is commonly misattributed to tired ocular muscles, when it is in fact the result of tired eyelid muscles, with our ocular muscles being strong and precise. <sup>14</sup> 
+                </p> <p>As such, user-friendly interfaces should be utilized to combat eye fatigue, such as using screens of darker shades, and having shorter gaze durations for selection of words or letters (dwell times).</p>
               </li>
             </ol>
           </div>
@@ -300,7 +415,15 @@
       </sl-details>
 
       <sl-details summary="3.2 Value Proposition">
-        <p>The proposed product aims to provide real-time communication, reliable calibration, and increased independence.</p>
+        <p><div style="margin-top: 0px;">
+
+  <p>The proposed product hopes to provide value through the following:</p>
+  <ol style="margin-left: 20px;">
+    <li>Real-time and efficient communication</li>
+    <li>Reliable Calibration system despite changes in external factors</li>
+    <li>Empowering users with greater independence and flexibility</li>
+  </ol>
+</div></p>
       </sl-details>
 
       <sl-details summary="3.3 Product Design Strategy">
@@ -309,52 +432,10 @@
             
 
 
+            To execute a fruitful yet systematic design process, a list of detailed design demands and specifications were constructed from observations and used to aid in each individual component prototyping. Not only that, current market alternatives were studied to gather insights into how existing solutions address similar challenges, identifying gaps that the proposed design could fill. 
 
 
 
-
-            <table style="width:100%; border-collapse: collapse; margin: 20px 0;">
-              <thead>
-                <tr>
-                  <th style="background-color: #2d70b3; color: white; font-weight: bold; padding: 10px;">Insights</th>
-                  <th style="background-color: #2d70b3; color: white; font-weight: bold; padding: 10px;">Needs</th>
-                  <th style="background-color: #2d70b3; color: white; font-weight: bold; padding: 10px;">Functional Requirements of Assistive Technology</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td style="border: 1px solid #333; padding: 10px;">TA often mentioned <strong>Eye Fatigue</strong>, attributing it to using the eye-gaze technology</td>
-                  <td style="border: 1px solid #333; padding: 10px;">TA <strong>needs</strong> to have a <strong>comfortable and User-Friendly Interface</strong></td>
-                  <td style="border: 1px solid #333; padding: 10px;">The AAC Application should minimize eye fatigue by offering <strong>ergonomic design features</strong>.</td>
-                </tr>
-                <tr>
-                  <td style="border: 1px solid #333; padding: 10px;">TA often had to <strong>retype their words</strong>, as they are unable to accurately select the letter that they want.</td>
-                  <td style="border: 1px solid #333; padding: 10px;">TA <strong>needs</strong> more precise selection capability and minimized error rates.</td>
-                  <td style="border: 1px solid #333; padding: 10px;">The AT should include enhanced tracking precision and error correction features to minimize retyping and improve efficiency. Additionally, predictive text capabilities should be included to speed up typing.</td>
-                </tr>
-                <tr>
-                  <td style="border: 1px solid #333; padding: 10px;">TA wants to comment on <strong>their surroundings</strong> especially when they are outdoors, but are not able to do it in <strong>real-time</strong></td>
-                  <td style="border: 1px solid #333; padding: 10px;">TA <strong>needs</strong> to have efficient real-time interaction, especially outdoors.</td>
-                  <td style="border: 1px solid #333; padding: 10px;">The AAC application should provide users with easily accessible words about their surroundings, enabling effective real-time communication about their surroundings.</td>
-                </tr>
-                <tr>
-                  <td style="border: 1px solid #333; padding: 10px;">External factors such as lighting conditions, gaze of others, and movement frequently interrupt TA's communication, leading to a high need for recalibration.</td>
-                  <td style="border: 1px solid #333; padding: 10px;">TA <strong>needs</strong> an eye-gaze detector that is resilient against external factors.</td>
-                  <td style="border: 1px solid #333; padding: 10px;">The input device should be resistant to external environmental factors like changes in lighting, and minimize the need for frequent recalibration.</td>
-                </tr>
-                <tr>
-                  <td style="border: 1px solid #333; padding: 10px;">TA often had <strong>emergency situations</strong> that required the attention of caregivers, but were unable to communicate it in a <strong>timely manner</strong></td>
-                  <td style="border: 1px solid #333; padding: 10px;">TA <strong>needs</strong> a way to efficiently communicate in urgent situations.</td>
-                  <td style="border: 1px solid #333; padding: 10px;">The AAC Application should allow for quick and reliable communication during emergencies, incorporating shortcuts or a dedicated "SOS" command to alert caregivers promptly.</td>
-                </tr>
-                <tr>
-                  <td style="border: 1px solid #333; padding: 10px;">TA had <strong>slow communication</strong> with others.</td>
-                  <td style="border: 1px solid #333; padding: 10px;">TA <strong>needs</strong> a way to increase the speed of sentence generation on their AAC</td>
-                  <td style="border: 1px solid #333; padding: 10px;">The AAC Application should allow for the quick formation of sentences based on a few contextual words, removing the need for manual selection of every word.</td>
-                </tr>
-              </tbody>
-            </table>
-            
 
 
 
@@ -374,174 +455,78 @@
         </sl-details>
 
         <sl-details summary="3.3.2 Current Market Alternatives">
-          <p>Evaluation of existing solutions, specifically focusing on WaveTalk and Proloquo2go.</p>
+          <p>This section provides an overview of existing solutions available in the market, focusing on AAC Application Interfaces as well as Eye Gaze Input Devices. The evaluation aims to determine the strengths and weaknesses of each alternative, identifying areas for improvement that could enhance usability for TAs with MND. These insights will also inform the concept generation plan in the subsequent section.
+
+
+
+
+
+
+          </p>
+
+
+          <p> <h4>3.3.2.1 Evaluation of AAC Interface Design and Functionality </h4>
+            This subsection evaluates existing app interfaces for AAC solutions, focusing on usability, accessibility, and specific features that are critical for users with MND. 
+
+            The current solutions in the market will be evaluated against the functional requirements that the assistive technology should have in the previous section.
+            
+            WaveTalk and Proloquo2Go are both AAC (Augmentative and Alternative Communication) solutions currently available in the market. WaveTalk is an AI powered AAC which aims to enhance communication for individuals with verbal disabilities. On the other hand, Proloquo2Go is an award winning, symbol-based AAC app designed for individuals with speech difficulties, offering a highly customizable and intuitive interface for building phrases and sentences using symbols, providing effective communication for various environments.
+    
+
+
+          </p>
 
           
 
+          <div style="text-align: center;">
 
+            <img src="assets/CAA1.png" alt="Prototyping Results for EyeAssist Eye-Gaze Technology" style="max-width: 80%; height: auto; border: 1px solid #ccc;">
+          </div>
 
+          <div style="text-align: center;">
 
-
-
-          <table style="width:100%; border-collapse: collapse; font-family: Arial, sans-serif; margin-top: 20px;">
-            <thead>
-              <tr>
-                <th style="border: 1px solid #333; background-color: #337ab7; color: white; padding: 10px; width: 30%;">Factors</th>
-                <th style="border: 1px solid #333; background-color: #4CAF50; color: white; padding: 10px; width: 35%;">WaveTalk</th>
-                <th style="border: 1px solid #333; background-color: #FFD700; color: white; padding: 10px; width: 35%;">Proloquo2go</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td style="border: 1px solid #333; padding: 10px; vertical-align: top; font-weight: bold;">
-                  Ergonomic Features to minimize Eye Fatigue
-                </td>
-                <td style="border: 1px solid #333; padding: 10px; background-color: #e1f3df; vertical-align: top;">
-                  <p><strong>High</strong></p>
-                  <hr style="border: 1px solid #333;">
-                  <p>WaveTalk has features such as:</p>
-                  <ul style="margin: 0; padding-left: 20px;">
-                    <li><strong>AI AutoCompletion and Smart Language System:</strong> Helps TA form sentences based on few contextual words with OpenAI.</li>
-                    <li><strong>Symbol-Based AAC:</strong> Reduces the need of typing words letter by letter.</li>
-                    <li><strong>Word Prediction Capabilities:</strong> Quick access to commonly used words.</li>
-                  </ul>
-                </td>
-                <td style="border: 1px solid #333; padding: 10px; background-color: #fffacd; vertical-align: top;">
-                  <p><strong>Moderate</strong></p>
-                  <hr style="border: 1px solid #333;">
-                  <p>Proloquo2go has features such as:</p>
-                  <ul style="margin: 0; padding-left: 20px;">
-                    <li><strong>Symbol-Based AAC:</strong> Reduces the need of typing words letter by letter.</li>
-                    <li><strong>Word Prediction Capabilities:</strong> Quick access to commonly used words.</li>
-                    <li><strong>Easily Accessible Pause Button:</strong> Helps users with MND to pause eye-tracking temporarily, enabling them to survey the screen without unintentionally selecting items, providing more control and reducing errors in navigation.</li>
-                  </ul>
-                </td>
-              </tr>
-              <tr>
-                <td style="border: 1px solid #333; padding: 10px; vertical-align: top; font-weight: bold;">
-                  Emergency Functions for Timely Alerting
-                </td>
-                <td style="border: 1px solid #333; padding: 10px; background-color: #FFE4B5; vertical-align: top;">
-                  <p><strong>Moderate</strong></p>
-                  <hr style="border: 1px solid #333;">
-                  <p>WaveTalk has features such as:</p>
-                  <ul style="margin: 0; padding-left: 20px;">
-                    <li><strong>Emergency SOS Button:</strong> Provides TA with a quick-access feature to call emergency hotlines, such as an ambulance, during critical situations. Activating the button immediately connects to emergency services, ensuring timely assistance when needed.</li>
-                  </ul>
-                </td>
-                <td style="border: 1px solid #333; padding: 10px; background-color: #FA8072; vertical-align: top;">
-                  <p><strong>Low</strong></p>
-                  <hr style="border: 1px solid #333;">
-                  <p>No features currently.</p>
-                </td>
-              </tr>
-              <tr>
-                <td style="border: 1px solid #333; padding: 10px; vertical-align: top; font-weight: bold;">
-                  Real-Time Interaction
-                </td>
-                <td style="border: 1px solid #333; padding: 10px; background-color: #e1f3df; vertical-align: top;">
-                  <p><strong>High</strong></p>
-                  <hr style="border: 1px solid #333;">
-                  <p>WaveTalk has features such as:</p>
-                  <ul style="margin: 0; padding-left: 20px;">
-                    <li><strong>Camera-based Recommender:</strong> Allows TA to capture surroundings and receive word suggestions through object detection.</li>
-                    <li><strong>Location-based Recommender:</strong> Allows tracking of TA's current location and provides word suggestions accordingly.</li>
-                  </ul>
-                </td>
-                <td style="border: 1px solid #333; padding: 10px; background-color: #fffacd; vertical-align: top;">
-                  <p><strong>Moderate</strong></p>
-                  <hr style="border: 1px solid #333;">
-                  <p>Proloquo2go has features such as:</p>
-                  <ul style="margin: 0; padding-left: 20px;">
-                    <li><strong>Camera-based Recommender:</strong> Allows TA to capture surroundings and receive word suggestions through object detection.</li>
-                  </ul>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+            <img src="assets/caa3.png" alt="Prototyping Results for EyeAssist Eye-Gaze Technology" style="max-width: 80%; height: auto; border: 1px solid #ccc;">
+          </div>
           
 
-          <table style="width:100%; border-collapse: collapse; font-family: Arial, sans-serif; margin-top: 20px;">
-            <thead>
-              <tr>
-                <th rowspan="2" style="border: 1px solid #333; background-color: #337ab7; color: white; padding: 10px; width: 20%;">Factors</th>
-                <th colspan="2" style="border: 1px solid #333; background-color: #337ab7; color: white; padding: 10px; text-align: center;">The assistive technology (AT) should reduce external interruptions, and the need for recalibration caused by the surroundings.</th>
-              </tr>
-              <tr>
-                <th style="border: 1px solid #333; background-color: #FFD700; color: white; padding: 10px; width: 40%;">Tobii PCEye</th>
-                <th style="border: 1px solid #333; background-color: #4CAF50; color: white; padding: 10px; width: 40%;">Tobii Eyeglasses 3</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td style="border: 1px solid #333; padding: 10px; vertical-align: top;">
-                  <table style="width: 100%;">
-                    <tr>
-                      <td style="border-bottom: 1px solid #333; padding: 5px;"><strong>Sunlight Resistance</strong></td>
-                    </tr>
-                    <tr>
-                      <td style="padding: 5px;"><strong>Detection Interference</strong></td>
-                    </tr>
-                    <tr>
-                      <td style="border-top: 1px solid #333; padding: 5px;"><strong>Calibration Stability</strong></td>
-                    </tr>
-                  </table>
-                </td>
-                <td style="border: 1px solid #333; padding: 10px; background-color: #fffacd; vertical-align: top;">
-                  <p><strong>Sunlight Resistance</strong>: Limited</p>
-                  <p style="margin-top: 0;">For both Tobii PCEye and Tobii Eyeglasses 3, though they can be used in outdoor settings, the need for recalibration is high according to interviews with users.</p>
-                </td>
-                <td style="border: 1px solid #333; padding: 10px; background-color: #fffacd; vertical-align: top;">
-                  <p><strong>Sunlight Resistance</strong>: Limited</p>
-                  <p style="margin-top: 0;">For both Tobii PCEye and Tobii Eyeglasses 3, though they can be used in outdoor settings, the need for recalibration is high according to interviews with users.</p>
-                </td>
-              </tr>
-              <tr>
-                <td style="border: 1px solid #333; padding: 10px; vertical-align: top;"></td>
-                <td style="border: 1px solid #333; padding: 10px; background-color: #FA8072; vertical-align: top;">
-                  <p><strong>High</strong></p>
-                  <hr style="border: 1px solid #333; margin: 5px 0;">
-                  <ul style="margin: 0; padding-left: 20px;">
-                    <li>Fixed position for eye tracking</li>
-                    <li>More prone to detect unintended objects within its field of view</li>
-                    <li>Susceptible to interference from movements by people or objects nearby</li>
-                  </ul>
-                </td>
-                <td style="border: 1px solid #333; padding: 10px; background-color: #e1f3df; vertical-align: top;">
-                  <p><strong>Low</strong></p>
-                  <hr style="border: 1px solid #333; margin: 5px 0;">
-                  <ul style="margin: 0; padding-left: 20px;">
-                    <li>Follows the user's head movements</li>
-                    <li>Focuses on the user's intended gaze direction</li>
-                    <li>Reduces chances of detecting unintended objects</li>
-                  </ul>
-                </td>
-              </tr>
-              <tr>
-                <td style="border: 1px solid #333; padding: 10px; vertical-align: top;"></td>
-                <td style="border: 1px solid #333; padding: 10px; background-color: #e1f3df; vertical-align: top;">
-                  <p><strong>Low</strong></p>
-                  <hr style="border: 1px solid #333; margin: 5px 0;">
-                  <ul style="margin: 0; padding-left: 20px;">
-                    <li>Does not move in sync with user’s head; slight movement can misalign eyes relative to the tracker</li>
-                    <li>Higher potential of inaccuracies and apparent shifts in gaze direction</li>
-                  </ul>
-                </td>
-                <td style="border: 1px solid #333; padding: 10px; background-color: #FA8072; vertical-align: top;">
-                  <p><strong>High</strong></p>
-                  <hr style="border: 1px solid #333; margin: 5px 0;">
-                  <ul style="margin: 0; padding-left: 20px;">
-                    <li>Moves in sync with the user's head</li>
-                    <li>Maintains a consistent relative position between the eyes and the tracker</li>
-                    <li>Reduces potential inaccuracies and apparent shifts in gaze direction <sup>[1]</sup></li>
-                  </ul>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+
+          <div style="text-align: center;">
+
+            <img src="assets/caa2.png" alt="Prototyping Results for EyeAssist Eye-Gaze Technology" style="max-width: 80%; height: auto; border: 1px solid #ccc;">
+          </div>
+
+          <p>
+
+
+
+            While WaveTalk offers more advanced functionality than Proloquo2Go across all three factors, there are areas for improvement. WaveTalk’s emergency functions are currently designed for highly critical situations, such as calling an ambulance. However, MND patients may face non-life-threatening emergencies, like issues with saliva control, that also require immediate assistance but do not necessitate extreme responses. Adjusting the emergency function to include options for these less critical, yet urgent, situations could make the system more practical and responsive to the varied needs of MND patients.
+
+Additionally, while both WaveTalk and Proloquo2go offer Camera-based Recommender functions for Real-time interaction, this might not be fast enough for everyday needs. Improving the speed and responsiveness of this feature would enhance the overall interaction experience, enabling quicker and more efficient day-to-day communication.
+
+          </p>
+          <h4> 3.3.2.2 Evaluation of Eye-Gaze Input Device</h4>
+          Currently, the market offers both stationary and wearable sensors, such as the Tobii PCEye (stationary) and Tobii Eyeglasses 3 (wearable). The Tobii PCEye is a stationary eye-tracking device that attaches to a computer screen, providing precise eye control for use in indoor and outdoor environments. In contrast, the Tobii Eyeglasses 3 are wearable eye-tracking glasses, designed for hands-free interaction in both indoor and outdoor environments, offering greater mobility and flexibility for users.
+
+These solutions provide different advantages depending on the context of use. In the table below, we evaluate these two types of sensors based on functional requirements mentioned in the table below.
+
+
+          <div style="text-align: center;">
+
+            <img src="assets/CurrentAltINT.png" alt="Prototyping Results for EyeAssist Eye-Gaze Technology" style="max-width: 80%; height: auto; border: 1px solid #ccc;">
+          </div>
+
+
+
+
+
+
           
-          <p style="text-align: center; font-style: italic; font-size: 0.9em; margin-top: 20px;">
-            As such, with a higher calibration safety, and lower detection interference, Tobii Eyeglasses 3, a wearable eye-gaze tracker, can lead to a smaller need for recalibration for TA.
+          
+
+          
+          <p> 
+            As such, with a higher calibration safety, and lower detection interference, Tobii Eyeglasses 3, a wearable eye-gaze tracker can lead to a smaller need for recalibration for TA, minimizing their dependence on their caregivers, and offering a more uninterrupted way of communication. With that, the lighting capabilities of both systems should be improved, to improve the accuracy of the eye-gaze input device.
+
           </p>
           
 
@@ -561,12 +546,134 @@
   <!-- Section 4: AI Connect - The Solution -->
   <div id="ai-connect" class="section">
     <sl-details summary="4. AI Connect - The Solution">
-      <p>Introduction to EyeAssist and WaveTalk 2.0, designed to enhance AAC for MND patients.</p>
-      <sl-details summary="4.2.1 Current Features adapted from WaveTalk 1.0">
-        <p>Features from WaveTalk 1.0 retained in WaveTalk 2.0.</p>
+      <p>AIConnect is an all in one communication on the go that uses eye movement to interact with a communication application.
+        <p>AI Connect consists of the following components:</p>
+        <ol>
+          <li>WaveTalk 2.0, a communication application targeted to the needs of individuals with MND. This was built upon WaveTalk which was initially catered to individuals with cerebral palsy.</li>
+          <li>EyeAssist, an eye gaze tracking wearable device.</li>
+        </ol>
+        
+
+
+
+      </p>
+
+      <div style="text-align: center;">
+
+        <img src="assets/ConceptPlan.png" alt="Prototyping Results for EyeAssist Eye-Gaze Technology" style="max-width: 80%; height: auto; border: 1px solid #ccc;">
+      </div>
+
+
+
+      <sl-details summary="4.2.1 EyeAssist">
+        <p>
+
+          <h2>5. EyeAssist</h2>
+
+          <h3>5.1 Detailed Design</h3>
+          
+          <p>Based on the design demands and specifications, there are <strong>current gaps</strong> in the functionality of current AT devices that aim to register TA’s eye motion for communicative purposes.</p>
+          
+          <p>EyeAssist is a wearable assistive technology in the form of smart eyewear, which tracks the TAs’ gaze and also addresses this issue. This section will focus on the enhancements made to the eye-tracking module, outdoor optimization, and the real-time video processing system of the EyeAssist device.</p>
+          
+          <p>EyeAssist comprises of:</p>
+          
+          <ol>
+            <li>
+              <strong>SmartLens:</strong> Equipped with infrared illuminators and detectors located on the inner surface of the lenses, SmartLens uses infrared light to accurately track eye movement.
+              <p>The dynamic brightness control feature adjusts the intensity of the infrared light based on ambient conditions—making the light brighter in challenging environments where a stronger infrared reflection is needed for precise corneal reflection tracking. This ensures consistent and reliable eye tracking performance regardless of changing lighting conditions.</p>
+            </li>
+          
+            <li>
+              <strong>SmartCam:</strong> Positioned on the eyewear frame, SmartCam offers a wide field of view to effectively capture the user's surroundings. It processes real-time visual data, recognizes objects, and provides actionable recommendations via the application, enabling users to receive relevant suggestions based on their environment.
+            </li>
+          
+            <li>
+              <strong>UV-Polarized Add-On:</strong> This clip-on attachment is designed to ensure controlled lighting conditions for effective eye-tracking happening on the inner surface of the lenses.
+              <p>It is suitable for both indoor and outdoor use, helping to maintain eye-gaze accuracy by blocking out infra-red light from the sun from being captured by the infra-red photodetectors. This feature enhances the overall precision of the SmartLens in varying lighting environments.</p>
+            </li>
+          </ol>
+          
+
+
+        </p>
       </sl-details>
-      <sl-details summary="4.2.2 Modified Features for MND Patients">
-        <p>Modifications in WaveTalk 2.0 to better meet MND patients’ needs.</p>
+      <sl-details summary="4.2.2 WaveTalk 2.0">
+        <p>
+          <h3>Features of WaveTalk 2.0 kept from WaveTalk (Ver.1)</h3>
+          Currently, WaveTalk (Ver.1)  is an AI Powered Augmentative Alternative Communication Application that is targeted to suit the needs of individuals with Cerebral Palsy. WaveTalk (Ver.1) consists of an AI Auto-Completion and Smart Language System Function, with their respective functions below. These features will be preserved in WaveTalk 2.0 as it enhances the efficiency and effectiveness of communication for TA.
+          <table border="1" cellpadding="10" cellspacing="0">
+            <thead>
+              <tr>
+                <th>Feature</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>AI Auto-Completion</td>
+                <td>
+                  <ul>
+                    <li>Auto-completes sentences as words are selected</li>
+                    <li>Learns user speech patterns through machine learning</li>
+                    <li>Provides multiple autocomplete options for users to cycle through</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>Smart Language System</td>
+                <td>
+                  <ul>
+                    <li>Robust word library with symbols</li>
+                    <li>Optimized for prompt engineering and easy addition of new vocabulary</li>
+                    <li>Includes location detection for enhanced contextual use</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>Widget Function</td>
+                <td>
+                  <ul>
+                    <li>Emotions function to allow TA to select the tone or emotional context when speaking a sentence.</li>
+                    <li>Camera function to allow TA to capture surroundings and receive word suggestions through object detection.</li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+
+
+
+        </p>
+
+
+        <p>
+          <h3> Proposed Modifications to WaveTalk (Ver.1)</h3>
+          <p>Additionally, in accordance to the needs of our TA, who has the condition of Motor Neurone Disease, I propose the following:</p>
+
+          <h4>6.1.1 Aiding Real-Time Interactions</h4>
+          <p>I propose the addition of a Real-Time Surroundings Recommender feature to minimize the effort required by the TA to mention objects in their surroundings. This feature would reduce the typing and navigation effort, significantly enhancing interaction efficiency, especially when the TA is outdoors. The recommender aims to facilitate fluid conversations beyond just communicating needs, thereby improving the TA’s overall quality of life (QoL).</p>
+          
+          <p>Current AAC interfaces like WaveTalk and Proloquo2Go incorporate camera-based recommenders that require the TA to take a picture to identify objects in their environment, which then appear in the AAC interface. However, this process is often cumbersome.</p>
+          
+          <p>With the Real-Time Surroundings Recommender, the TA can immediately identify and mention items around them without the need for taking pictures, enabling more dynamic and real-time interaction with caregivers. This solution not only accelerates communication but also empowers the TA to engage in richer conversations, significantly improving their experience in outdoor settings.</p>
+          
+          <h4>6.1.2 Easily Accessible Pause Button to Enhance Control for TA</h4>
+          <p>I propose the addition of an easily accessible pause button, which will give the user greater control over when to activate or deactivate gaze tracking, thereby reducing frustration and increasing usability. Since TA uses their eyes for selection, it is important for them to be able to survey the screen without unintentionally triggering actions. The pause button will allow them to rest their eyes and browse the screen freely, addressing the "Midas Touch" issue that often affects eye-gaze users. <sup>15</sup></p>
+          
+          <h4>6.1.3 Instant Speech Function</h4>
+          <p>I propose the addition of an Instant Speech function.</p>
+          
+          <p>In current AAC interfaces, users must press a "Speak" button after typing a word or sentence. This approach is not ideal for emergency situations, which many patients with MND face, especially when dealing with issues such as problematic saliva or sudden discomfort. To address this, I propose that emergency words be instantly spoken out as soon as they are selected. Patients can choose their own emergency words, allowing for faster and more personalized communication during critical moments.</p>
+          
+          <h4>6.1.4 Dwell Time Indicator</h4>
+          <p>To enhance user awareness and control, I propose the addition of a Dwell Time Indicator. This feature will provide visual feedback on how long the user has been focusing on a selection, making it easier to gauge the remaining time required for activation. This is especially helpful for users with MND, who use eyes as a modality of communication and may struggle with unintentional selections. The indicator can help reduce frustration by providing a clear, real-time countdown, ensuring selections are intentional and enhancing overall accuracy.</p>
+          
+          <h4>6.1.5 Darker Color Scheme for Reduced Eye Fatigue</h4>
+          <p>I propose implementing a darker color scheme for the interface to help reduce eye strain and fatigue. Eye-gaze users, particularly those with MND, often spend extended periods focused on their screens, which can lead to eye discomfort over time. A darker, high-contrast color scheme will be more comfortable for prolonged use, improving the user experience and minimizing the risk of eye fatigue. <sup>14</sup></p>
+          
+        </p>
       </sl-details>
     </sl-details>
   </div>
@@ -574,14 +681,181 @@
   <!-- Section 5: Product Prototyping -->
   <div id="product-prototyping" class="section">
     <sl-details summary="5. Product Prototyping">
-      <p>Functionality testing, lighting conditions, and image algorithm optimizations.</p>
+      <p>
+        <h4> 5.1 Functionality Testing </h4>
+        For the initial prototype of EyeAssist, the smart eyewear, I proposed utilizing Tobii EyeGaze 5 eye-tracking device. This decision is based on the need to evaluate and validate the core functionality of eye-tracking in EyeAssist, before moving on to making it a customized and fully-integrated product.   
+        <p>
+
+          
+        </p>
+
+
+        <div style="text-align: center;">
+
+        <img src="assets/P1Test.png" alt="Prototyping Results for EyeAssist Eye-Gaze Technology" style="max-width: 80%; height: auto; border: 1px solid #ccc;">
+      </div>
+      <div style="text-align: center; font-style: italic; margin-top: 10px;">
+        Prototype Testing Procedure - Functionality Test of Eye-Gaze Technology
+      
+      
+      </div>
+        
+        <div style="text-align: center;">
+
+          <img src="assets/P1Results.png" alt="Prototyping Results for EyeAssist Eye-Gaze Technology" style="max-width: 80%; height: auto; border: 1px solid #ccc;">
+
+
+        </div>
+<div style="text-align: center; font-style: italic; margin-top: 10px;">
+  Prototype Testing Results - Functionality Test of Eye-Gaze Technology
+</div>
+        
+
+<p>
+
+  While the eye-gaze technology demonstrated potential for hands-free typing, the challenges related to concentration, accuracy, and environmental sensitivity need further improvements. Enhanced stability in gaze tracking, better interface feedback, and solutions to reduce user fatigue could significantly enhance usability and overall user experience.
+
+</p>
+
+<h4> 5.2 Lighting Conditions Testing </h4>
+<p>
+  To evaluate the performance of EyeAssist under different lighting conditions, a prototype testing phase was conducted focusing on the impact of lighting environments on eye-tracking accuracy and ease of use. The aim was to determine whether shielding from direct light could enhance the system's accuracy and thereby improve typing speed.
+
+</p> 
+
+
+           
+
+
+            <div style="text-align: center;">
+<img src="assets/P2Test.png" alt="Prototyping Results for EyeAssist Eye-Gaze Technology" style="max-width: 80%; height: auto; border: 1px solid #ccc;">
+</div>
+<div style="text-align: center; font-style: italic; margin-top: 10px;">
+  Prototype Testing Procedure - Lighting Conditions Test of Eye-Gaze Technology
+
+
+</div>
+  
+<div style="text-align: center;">
+<img src="assets/P2Results.png" alt="Prototyping Results for EyeAssist Eye-Gaze Technology" style="max-width: 80%; height: auto; border: 1px solid #ccc;">
+</div>
+<div style="text-align: center; font-style: italic; margin-top: 10px;">
+  Prototype Testing Results - Lighting Conditions Test of Eye-Gaze Technology
+
+
+</div>
+<p>
+
+  The performance of EyeAssist was notably influenced by lighting conditions. Under ambient indoor lighting, the system was relatively easy to control and executed functions effectively. However, under mild outdoor sunlight, even when wearing a cap, accuracy and ease of use declined significantly, resulting in incorrect inputs and difficulty in reaching certain keys. In direct sunlight without a cap, the system failed to function as intended, being unable to detect the user’s gaze. These results emphasize the need for enhanced lighting adaptation to improve usability in various environments.
+</p>
+
+
+
+
+      
+        
+        <p><h3> 5.3 Real-Time Image Recognition Algorithm Testing </h3>
+          
+        </p>
+        
+        <p>
+            To evaluate the performance of SmartCam—a component in EyeAssist that integrates with the WaveTalk 2.0 application through a Real-Time Surroundings Recommender—a prototype testing phase was conducted. The focus was on using the YOLOv11 deep learning algorithm for object detection in a video. The aim was to determine whether the system could successfully identify objects and generate their names to support the functionality of the Real-Time Surroundings Recommender.
+
+
+          </p>
+          <p>
+
+            <div style="text-align: center;">
+              <img src="assets/P3Test.png" alt="Prototyping Results for EyeAssist Eye-Gaze Technology" style="max-width: 80%; height: auto; border: 1px solid #ccc;">
+              </div>
+
+
+
+              <div style="text-align: center; font-style: italic; margin-top: 10px;">
+                Prototype Testing Procedure -  Real-Time Image Recognition Algorithm 
+              
+              
+              </div>
+                
+
+
+
+              <div style="text-align: center;">
+                <img src="assets/P3Results.png" alt="Prototyping Results for EyeAssist Eye-Gaze Technology" style="max-width: 80%; height: auto; border: 1px solid #ccc;">
+                </div>
+                <div style="text-align: center; font-style: italic; margin-top: 10px;">
+                  Prototype Testing Results -  Real-Time Image Recognition Algorithm 
+                
+                
+                </div>
+          </p>
+
+
+
+          
+  
+              The eye-gaze technology showed promise for real-time object identification, highlighting its potential to transmit identified objects to the WaveTalk 2.0 application. However, improvements are needed to enhance the algorithm's accuracy.
+
+
+
+
+
+      
+       
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+    
     </sl-details>
   </div>
 
   <!-- Section 6: Shortcomings of Proposed System -->
   <div id="shortcomings" class="section">
     <sl-details summary="6. Shortcomings of Proposed System">
-      <p>Discussion of limitations and areas for improvement in the proposed solution.</p>
+      <p>
+        The proposed system faces several potential shortcomings. Below is a summary of these challenges and the corresponding proposals to address them:
+
+        <div style="text-align: center;">
+          <img src="assets/Short1.png" alt="Prototyping Results for EyeAssist Eye-Gaze Technology" style="max-width: 80%; height: auto; border: 1px solid #ccc;">
+          </div>
+          <div style="text-align: center;">
+            <img src="assets/Short2.png" alt="Prototyping Results for EyeAssist Eye-Gaze Technology" style="max-width: 80%; height: auto; border: 1px solid #ccc;">
+            </div>
+  
+            <div style="text-align: center; font-style: italic; margin-top: 10px;">
+              Table of Shortcomings, and justified proposals to mitigate it
+            
+            
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+           <p>
+
+            In order to ensure the proposed product meets user needs effectively, it is crucial to address its shortcomings in the following semester, and enhance its features to overcome existing challenges. 
+
+           </p> </p>
     </sl-details>
   </div>
 
@@ -589,22 +863,116 @@
   <div id="future-plans" class="section">
     <sl-details summary="7. Future Plans">
       <sl-details summary="7.1 Detailed Planning for Phases">
-        <p>Outline of development phases with goals and objectives.</p>
+        <p>
+          
+          <p>With Project Phase 1, of problem exploration as well as concept generation done, this project will move on to Project Phase 2 and 3 where Prototype development, as well as user testing and feedback will be conducted respectively.</p>
+
+<h3>Project Phase 2: Prototype Development</h3>
+
+<p>In the Prototype Development phase, the primary focus will be on building and integrating essential components to create a functional prototype. This phase is expected to take approximately 3.5 months and involves the following key deliverables:</p>
+
+<ul>
+  <li><strong>Hardware and Component Selection:</strong> Identifying and selecting suitable hardware and components to meet design and functional requirements.</li>
+  <li><strong>Sensor and Lens Integration:</strong> Integrating sensors and lenses to ensure that the device can accurately capture required data.</li>
+  <li><strong>Eye-Calibration System:</strong> Developing a calibration system to accurately track the user's gaze.</li>
+  <li><strong>WaveTalk 2.0 User Interface:</strong> Designing and implementing an upgraded user interface for WaveTalk to improve user experience.</li>
+  <li><strong>Real-Time Image Recognition:</strong> Implementing a system to enable real-time recognition of surrounding objects.</li>
+</ul>
+
+<p>These components are foundational in building a robust prototype that can serve as a functional version for initial testing.</p>
+
+<h3>Project Phase 3: Testing and Iteration</h3>
+
+<p>The Testing and Iteration phase aims to evaluate the performance of the prototype and refine it based on user feedback. This phase is estimated to take 1.5 months and involves two core activities, illustrated in the table below:</p>
+
+<ul>
+  <li><strong>Performance Evaluation:</strong> Assessing the effectiveness and functionality of the prototype, identifying potential areas of improvement.</li>
+  <li><strong>User Feedback:</strong> Gathering insights and feedback from real users to understand their experience and make any necessary iterations to improve usability.</li>
+</ul>
+
+
+          <div style="text-align: center;">
+            <img src="assets/ProjectPlans.png" alt="Prototyping Results for EyeAssist Eye-Gaze Technology" style="max-width: 80%; height: auto; border: 1px solid #ccc;">
+            </div>
+
+            <div style="text-align: center; font-style: italic; margin-top: 10px;">
+             Individual Components and their Performance Metrics
+            
+            
+            </div>
+            By focusing on performance evaluation and user feedback, this phase ensures the device is effective and ready for broader deployment.
+
+
+
+
+
+
+
+
+
+
+        </p>
       </sl-details>
       <sl-details summary="7.2 Stipulated Timeline">
-        <p>Timeline for each phase for a structured project progression.</p>
+        <p> It is also important to ensure that the project has a timeframe to follow. 
+          The Gantt chart below presents the project timeline up to April 2025, covering tasks like hardware procurement, software development, integration, assembly, and testing. It highlights the schedule for each activity, ensuring efficient coordination and progress tracking.
+          
+          
+          
+          
+          
+          <div style="text-align: center;">
+          <img src="assets/ProjPlansDates.png" alt="Prototyping Results for EyeAssist Eye-Gaze Technology" style="max-width: 80%; height: auto; border: 1px solid #ccc;">
+          </div>
+
+
+          <div style="text-align: center; font-style: italic; margin-top: 10px;">
+            Stipulated Project Timeline
+           
+           
+           </div>
+</p>
       </sl-details>
     </sl-details>
   </div>
 
   <!-- References -->
-  <div id="references" class="section">
-    <h3>References</h3>
-    <ol>
-      <li>Smith, J. "Motor Neurone Disease and Communication." Journal of Health, 2023.</li>
-      <li>Doe, A. "Assistive Technologies for Communication." Tech Journal, 2022.</li>
-    </ol>
-  </div>
+ <!-- References -->
+<div id="references" class="section">
+  <h3>References</h3>
+  <ol>
+    <li>Beukelman, D. R., Fager, S., Ball, L., & Dietz, A. (2007). AAC for adults with acquired neurological conditions: A review. <i>Augmentative and Alternative Communication</i>, 23(3), 230–242. <a href="https://pubmed.ncbi.nlm.nih.gov/16671842/">https://pubmed.ncbi.nlm.nih.gov/16671842/</a></li>
+
+    <li>Ball, L. J., Fager, S. K., Kretschmer, L. W., Beukelman, D. R., & Pattee, G. L. (2020). Lived experiences in the development and delivery of augmentative and alternative communication services for adults with acquired neurogenic communication disorders. <i>Augmentative and Alternative Communication</i>, 36(1), 1–12. <a href="https://pubmed.ncbi.nlm.nih.gov/32367081/">https://pubmed.ncbi.nlm.nih.gov/32367081/</a></li>
+
+    <li>Fager, S. K., Beukelman, D. R., & Jakobs, T. (2022). Augmentative and alternative communication for individuals with acquired neurological disorders: A perspective on interventions and outcomes. <i>Journal of Neurorehabilitation and Neural Repair</i>, 36(7), 104-115. <a href="https://pubmed.ncbi.nlm.nih.gov/35805750/">https://pubmed.ncbi.nlm.nih.gov/35805750/</a></li>
+
+    <li>Hardiman, O., Al-Chalabi, A., Chio, A., Corr, E. M., Logroscino, G., & Robberecht, W. (2017). Amyotrophic lateral sclerosis. <i>Nature Reviews Disease Primers</i>, 3, Article 17071. <a href="https://www.nature.com/articles/nrdp201771">https://www.nature.com/articles/nrdp201771</a></li>
+
+    <li>Stone, J. (2015). <i>Exploring the impact of expressive language development in children with autism spectrum disorder</i>. (Doctoral dissertation, Philadelphia College of Osteopathic Medicine). Digital Commons @ PCOM. <a href="https://digitalcommons.pcom.edu/cgi/viewcontent.cgi?article=1287&context=psychology_dissertations">https://digitalcommons.pcom.edu/cgi/viewcontent.cgi?article=1287&context=psychology_dissertations</a></li>
+
+    <li>Shepherd, T. A., Power, E., & O’Halloran, R. (2013). Perceptions of healthcare communication competence in medical consultations. <i>Journal of Communication Disorders</i>, 46(5), 376–387. <a href="https://www-tandfonline-com.libproxy1.nus.edu.sg/doi/pdf/10.3109/21678421.2013.817585">https://www-tandfonline-com.libproxy1.nus.edu.sg/doi/pdf/10.3109/21678421.2013.817585</a></li>
+
+    <li>Gelinas, D., & Stokic, D. S. (2011). ALS functional rating scale (ALSFRS) – A method for assessing functional decline in ALS. <i>Rehabilitation Measures Database</i>. <a href="https://www.sralab.org/sites/default/files/2017-07/PMandR_ALSRatingScale033111.pdf">https://www.sralab.org/sites/default/files/2017-07/PMandR_ALSRatingScale033111.pdf</a></li>
+
+    <li>Singh, H., & Singh, S. (2014). Human eye tracking and related issues: A review. <i>International Journal of Advanced Computer Science and Applications</i>, 5(9), 77–85. <a href="https://www.researchgate.net/profile/Hari-Singh-29/publication/265162808_Human_Eye_Tracking_and_Related_Issues_A_Review/links/54015f580cf2c48563aef42b/Human-Eye-Tracking-and-Related-Issues-A-Review.pdf">https://www.researchgate.net/profile/Hari-Singh-29/publication/265162808_Human_Eye_Tracking_and_Related_Issues_A_Review/links/54015f580cf2c48563aef42b/Human-Eye-Tracking-and-Related-Issues-A-Review.pdf</a></li>
+
+    <li>Allen, L. (2019). <i>The impact of visual support on learning in individuals with disabilities</i>. CORE. <a href="https://core.ac.uk/download/pdf/158974587.pdf">https://core.ac.uk/download/pdf/158974587.pdf</a></li>
+
+    <li>Gill, R., & Kantor, L. (2021). Analyzing eye-tracking data to understand visual perception in complex environments. <i>National Science Foundation</i>. <a href="https://par.nsf.gov/servlets/purl/10429095">https://par.nsf.gov/servlets/purl/10429095</a></li>
+
+    <li>Faber, M., & Schlegel, A. (2022). Eye-tracking methodologies for educational research: A guide for the novice. <i>Behavior Research Methods</i>, 54(3), 1012–1031. <a href="https://link.springer.com/article/10.3758/s13428-022-02010-3">https://link.springer.com/article/10.3758/s13428-022-02010-3</a></li>
+
+    <li>Hartselle, S., & Treadwell, A. (2019). Evaluating the usability of eye-tracking devices in clinical settings. <i>Journal of Allied Health</i>, 48(4), 320–326. <a href="https://alliedhealth.ceconnection.com/ovidfiles/00011363-201910000-00005.pdf">https://alliedhealth.ceconnection.com/ovidfiles/00011363-201910000-00005.pdf</a></li>
+
+    <li>Hornof, A. J. (2014). Eye movement patterns during the exploration of interactive displays. <i>Proceedings of the Symposium on Eye Tracking Research and Applications (ETRA)</i>, 147–154. <a href="https://ix.cs.uoregon.edu/~hornof/downloads/ETRA2014.pdf">https://ix.cs.uoregon.edu/~hornof/downloads/ETRA2014.pdf</a></li>
+
+    <li>LC Technologies. (n.d.). How does it work? <i>EyeGaze Edge Systems</i>. <a href="https://eyegaze.com/wp-content/uploads/How-Does-it-Work-1.pdf">https://eyegaze.com/wp-content/uploads/How-Does-it-Work-1.pdf</a></li>
+
+    <li>Chitty, J. (2013). <i>User-centered design for assistive technologies</i>. (Master's research paper, Ontario College of Art and Design University). Open Research Repository. <a href="https://openresearch.ocadu.ca/id/eprint/143/1/Chitty_MRP.pdf">https://openresearch.ocadu.ca/id/eprint/143/1/Chitty_MRP.pdf</a></li>
+  </ol>
+</div>
+
 
 </body>
 </html>
