@@ -129,22 +129,126 @@
         <img src="assets/Screenshoot3.png" alt="Prototype sketch" style="max-width: 80%; border-radius: 8px;">
         <figcaption>Figure A: Different Groups and their Communication Methods</figcaption>
       </figure>
-      <h3>1.2 Motivation</h3>
 
-      <p>[Explain what motivated the project here]</p>
     </div>
 
     <div class="section">
-      <h2>2. Problem Statement</h2>
-      <h3>2.1 Current Issues</h3>
-      <p>[Describe the current communication challenges]</p>
+      <h2>2. Problem Exploration </h2>
+      <h3>2.1 Communication Limitations of MND Patients</h3>
+      <p>Motor Neurone Disease (MND) is the degeneration of motor neurons, leading to muscle weakness and eventual paralysis. [2]  Physical impediments that these individuals experience make it difficult to control non-verbal communication such as body positioning, gesturing and touching. Due to muscle weaknesses, their facial expressions can also be difficult to interpret correctly.[3] As such, they face communication issues in both expressing themselves and being understood.</p>
+      <h3>2.2 Observations from Field Visit</h3>
+      <p>To clarify the needs of individuals with MND , I visited the MND Association (MNDa), an organisation serving individuals from early to late stages of MND.
+        I visited two individuals who were in the late stage of MND and observed how they interacted with their preferred AAC tool. Both of them have speech function 0 (loss of useful speech) based on the ALS Functional Rating Scale (ALSFRS). [4] 
+        They also have a handwriting function of 0 and are both unable to grip a pen, limiting their ability to communicate and thus, they rely solely on a high tech AAC for communication to their caregivers
+        </p>
+        <figure>
+          <img src="assets/Screenshot5.png" alt="Prototype sketch" style="max-width: 80%; border-radius: 8px;">
+          <img src="assets/Screenshot6.png" alt="Prototype sketch" style="max-width: 80%; border-radius: 8px;">
+          <figcaption>Figure B: Table of observations on how MND Patients communicate</figcaption>
+        </figure>
+      <h3>2.3 Limitations of Current Existing Assistive Technologies</h3>
+      <p>This is the list of limitations due to their physical symptoms and the gap in the current Assistive Technology (AT) for individuals with MND:</p>
+      <p> A. Slow communication speed due to letter-by-letter input. </p>
+      <p> Most MND patient visits utilize the Microsoft Keyboard which has letter-by-letter input. As our eyes are built to scan visual information and not to perform precise selection, using the eyes to select each letter requires unnaturally fixating on the small target, causing it to be slow. Not only that, but the need also to focus intently on specific areas of the screen multiple times add to the cognitive load of patients with MND, contributing to the discomfort that they face. [6] </p>
+      <p> B. The eye gaze technology mistakenly identifies the caregiver instead of the patient, causing a need for recalibration.</p>
+      <p>  During observations, it was noted that caregivers were frequently detected within the camera's detection range as they attempted to complete partially composed utterances on the MND patient’s AAC, given their visual access to the device. Similar behaviour has been documented in previous studies. As a result, accidental measurements can happen, where the eye tracker senses another pair of eyes.[7]] In this case, the eye tracking technology recognises the eyes of the caregiver and causes the need for the patient to recalibrate the eye tracking device. [8]
+      </p>
 
-      <h3>2.2 Target User Needs</h3>
-      <p>[Describe needs of users with MND]</p>
+      <p>
+        Though the patient is paralysed, they will need to make minor movements such as going to the washroom, or when they receive saliva swabbing treatment from their caregiver. Hence, each time that such activities occur, the eye-tracking technology requires recalibration. This experience corroborates with existing research which has shown that slight movements in head can also lead to errors in gaze location estimates, leading to inaccuracies and the need for recalibration. [8], [9]
+      </p>
+      <p> C. Slow communication by Individuals with MND as they tend to mistype letters occasionally. 
+
+      </p>
+      <p>
+        During house visits, it was observed that patients occasionally mistyped letters, as the system cannot reliably differentiate between intentional and unintentional eye movements. This is largely due to natural ocular behaviors such as saccades—rapid eye movements between fixation points—and eye drifts, which are small, involuntary shifts away from a fixed target. These phenomena can lead to incorrect fixations, resulting in errors when attempting to select specific letters or commands [5]
+        Additionally, eye trackers exhibit systematic errors, the disparity between the average gaze point location and actual fixation by them, causing a lack in accuracy. Eye movement data is inherently noisy, causing the calibration to deteriorate over the course of use per time. [7]
+        Furthermore, eye movement is a gross motor skill and less precise. Hence, it is more suitable for scanning as compared to focusing on selecting an object. [10], [11] Hence, the usage is unnatural and requires time to get used to. With mistyping of letters, there's a need for additional inputs done by users to correct it, leading to greater fatigue and frustration.
+        During house visits and from feedback from the patients, it was mentioned that bigger screens helped to reduce the occurrence of mistyped letters. However, they still felt constrained by the size of their screen given the physical limitations of the screen size of their laptop computers.
+      
+      </p>
+      <p>D. Individuals with MND lack a portable and mobile way of communication. 
+
+      </p>
+      Patients currently need to carry both their eye-gaze bar and Surface Pro computer when communicating outdoors. Even when indoors, they require the full setup positioned directly in front of them to use the system effectively. However, finding a suitable surface or table for setup is often challenging—especially in public or informal environments—since patients with severe paralysis are unable to adjust their position to align with the device’s eye detection range. This limitation significantly impacts the portability, usability, and independence of existing communication systems for users with restricted mobility.
+      <p>
+        <p> E. Individuals with MND often mentioned eye fatigue due to incompatible screen-based interfaces.
+
+        </p>
+        <p>
+          During the visits with patients, the most mentioned problem that they face is eye fatigue when using the high tech AAC. They often attributed it to the need to focus on the small buttons on the keyboard. As such, user-friendly interfaces should be utilized to combat eye fatigue. Users also face high cognitive fatigue when using incompatible screen-based interfaces. 
+
+        </p>
+
+      </p>
+      <h3>2.4 Value Proposition</h3>
+      <p>
+        The proposed product hopes to provide value through the following:
+      </p>
+      <p>
+        1. Accurate, quick and comfortable communication 
+      </p>
+      <p>
+        2. Reliable calibration system despite changes in position of caregiver interference
+      </p>
+      <p> 3. Empowering users with greater independence and flexibility
+      </p>
+      <p>
+        4.	Portable and Mobile communication solution
+      </p>
+      <h2>3. Product Design Strategy: Design Statement </h2>
+      <p>
+        This project aims to design an Assistive Technology (AT) that leverages on the physical and cognitive capabilities of Individuals with Motor Neurone Disease, to perform reliable, real-time and effective communication.
+      </p>
+      <h2>4. Product Design Strategy: Design Specification <Table></Table> </h2>
+<p>
+  To execute a fruitful yet systematic design process, a list of detailed design demands and specifications were constructed from observations and used to aid in each individual component prototyping in the table below.
+</p>
+<figure>
+  <img src="assets/Design_Spec_Tab.png" alt="Prototype sketch" style="max-width: 80%; border-radius: 8px;">
+  <figcaption>Figure C: Design Specification Table</figcaption>
+</figure>
     </div>
 
     <div class="section">
-      <h2>3. Objectives</h2>
+      <h2>5. Current Market Alternatives</h2>
+      <p>This section provides an overview of existing solutions available in the market, focusing on AAC Application Interfaces as well as Eye Gaze Input Devices. The evaluation aims to determine the strengths and weaknesses of each alternative, identifying areas for improvement that could enhance usability for TAs with MND. These insights will also inform the concept generation plan in the subsequent section.
+      </p>
+      <h3> 5.1 Current Market Alternatives for AAC Application 
+      </h3>
+      <p>This subsection evaluates existing app interfaces for AAC solutions, focusing on usability, accessibility, and specific features that are critical for users with MND. 
+        The current solutions in the market will be evaluated against the functional requirements that the assistive technology should have in the previous section.
+        WaveTalk and Proloquo2Go are both AAC (Augmentative and Alternative Communication) solutions currently available in the market. WaveTalk is an AI powered AAC which aims to enhance communication for individuals with Cerebral Palsy. On the other hand, Proloquo2Go is an award winning, symbol-based AAC app designed for individuals with speech difficulties, offering a highly customizable and intuitive interface for building phrases and sentences using symbols, providing effective communication for various environments.
+    
+      </p>
+      <figure>
+        <img src="assets/MA_AAC.png" alt="Prototype sketch" style="max-width: 80%; border-radius: 8px;">
+        <figcaption>Figure D: Market Alternatives for AAC Applications</figcaption>
+      </figure>
+<p>
+  WaveTalk is superior to Proloquo2go when assessing the factor of ergonomic features as well as predictive text capabilities with its unique AI AutoCompletion System.
+
+Currently with WaveTalk being highly catered to individuals with Cerebral Palsy who relies on using a joystick, connected to the application for selection. Individuals with Cerebral Palsy have more control over their gross motor as compared to their fine motor . [12] On the other hand, individuals with MND who use eyes to select buttons on the screen, utilise fine motor skills. With the nature of gross motor skills being different from fine motor skills, there is a need for a change in interface for individuals with MND.
+
+</p>
+<h3>
+5.2 Current Market Alternatives for Eye-Tracking Devices
+
+</h3>
+<p>
+
+  The Tobii PCEye, a stationary eyetracker and Meta Quest Pro, a Mixed Reality (MR) Headset are two market alternatives worth assessing for this section.
+With Tobii PCeye being claimed as a compact stationary eye tracker which specifically targets those with disabilities. Like that of the EyeGaze 5 used currently by most MND patients in Singapore. It is a stationary eye tracker that must be mounted onto the computer screen, allowing the user to perform selections on the computer using their eyes. 
+On the other hand, Meta Quest Pro also allows for eye tracking, with in built sensors to detect the movement of the eyes, allowing for eye tracking. While its eye-tracking feature is not specifically designed for applications catering to those with disabilities, the possibility of integrating Meta Quest Pro into a solution system is viable as it has been proven to perform eye tracking with high accuracy. 
+
+</p>
+<figure>
+  <img src="assets/MA_input1.png" alt="Prototype sketch" style="max-width: 80%; border-radius: 8px;">
+  <img src="assets/MA_input2.png" alt="Prototype sketch" style="max-width: 80%; border-radius: 8px;">
+
+  <figcaption>Figure E: Market Alternatives for Eye Tracking Solutions</figcaption>
+</figure>
+
       <h3>3.1 Main Goals</h3>
       <p>[List key goals of the project]</p>
     </div>
