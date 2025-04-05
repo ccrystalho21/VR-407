@@ -248,16 +248,468 @@ On the other hand, Meta Quest Pro also allows for eye tracking, with in built se
 
   <figcaption>Figure E: Market Alternatives for Eye Tracking Solutions</figcaption>
 </figure>
-
-      <h3>3.1 Main Goals</h3>
-      <p>[List key goals of the project]</p>
     </div>
 
     <div class="section">
-      <h2>4. Design Approach</h2>
-      <h3>4.1 Design Considerations</h3>
-      <p>[What was considered in designing the solution]</p>
+      <h2>6. Concept Generation Plan</h2>
+      <h3>6.1 Concept Selection Plan</h3>
+      <p>To ensure that problems faced by Individuals with Motor Neurone Disease are met, these two concepts are chosen: </p>
+<p><u>Screen Based Communication System:
+</u>
+</p>
+<p> <u>The  Screen Based Communication System</u>, utilises a Stationary Eye-tracker and Computer (Figure Y) and comprising of:
+<p>
+  1.	AITalk, a backend algorithm providing AI AutoComplete Sentences, cycled through OpenAI for faster sentence completion
+</p>
+<p> 2. Screen-Based User Interface for efficient communication
 
+</p>
+<p>
+  This is summarised in the flowchart below. 
+</p>
+<figure>
+  <img src="assets/DiagSB.png" alt="Prototype sketch" style="max-width: 80%; border-radius: 8px;">
+  <figcaption>Figure F: Interaction Diagram of Screen Based Communication System</figcaption>
+</figure>
+<p>
+  The aim of this system is to find the best way of efficient communication, by modifying the screen-based user interface, and tapping on the AITalk back-end algorithm. 
+</p>
+<p><u>
+  Mixed Reality (MR) Based Communication System:
+</u>
+</p>
+<p>
+  <u>The  Mixed Reality Based Communication System</u>, utilises the Meta Quest Pro Headset and comprising of:
+</p>
+<p>
+  1. AITalk, a backend algorithm providing AI AutoComplete Sentences, cycled through OpenAI for faster sentence completion
+</p>
+<p>
+  2. Mixed Reality-Based User Interface for efficient communication
+</p>
+<p>
+  This is summarised in the flowchart below. 
+</p>
+<figure>
+  <img src="assets/DIagMR.png" alt="Prototype sketch" style="max-width: 80%; border-radius: 8px;">
+  <figcaption>Figure G: Interaction Diagram of Mixed Reality Based Communication System</figcaption>
+</figure>
+<p>
+  The aim of this system is to experiment with the possibility of communication using eye gestures, using mixed reality. With findings in the market alternatives for input devices, the mixed reality headset has been conceptually proven to be of higher accuracy than stationary eye-trackers and is able to combat the issue that most MND patients have mentioned , where the buttons are often too small. This is due to Mixed reality provides an environment where the buttons are not constrained by the computer screen size, hence allowing for larger button size.
+
+</p>
+<p>
+  Both systems will utilise AITalk, a backend algorithm that allows for AIAutoCompletion of sentences to aid with efficient communication. 
+</p>
+<p>
+  With working on these 2 concepts, this project aims to find out the best modality of communication for patients diagnosed with Motor Neurone Disease. In section the Results of the tests will be discussed and analysed to compare the 2 different proposed modalities alongside the current traditional method of communicating. 
+</p>
+<h3>
+  6.2 Detailed Design of AITalk (Back-end Algorithm)
+</h3>
+<p>
+  Both the Screen Based system and MR Based System utilises the backend algorithm, AITalk (adapted from WaveTalk – Figure H ) for the eye inputs.
+
+
+</p>
+<figure>
+  <img src="assets/WaveTalk.png" alt="Prototype sketch" style="max-width: 80%; border-radius: 8px;">
+  <figcaption>Figure H: WaveTalk Application</figcaption>
+</figure>
+<p>
+  AITalk will work on the concept of navigating through core words (making up 80%) of a sentence and fringe words (making up the remaining 20%). Core words are verbs, adjectives and pronouns. On the other hand, fringe words are situation-specific or people-specific words. With these words chosen as input by users, it is cycled into OpenAi for AI AutoCompletion of sentences to allow individuals to complete sentences in a fast and efficient manner, without the need to select each letter on a traditional keyboard to construct a sentence. 
+
+
+</p>
+<p>
+  While AITalk (adapted from WaveTalk) has been proven to allow for a 44.6% time reduction in communication for patients with Cerebral Palsy who use a joystick to navigate the WaveTalk Application, it is yet to be explored if it would be suitable for the target group of this report – Patients with Motor Neurone Disease, due to the difference in method of inputs. There is a fundamental difference in input methods – Cerebral Palsy patients interact with the application via hand-controlled joysticks whereas MND patients rely on eye tracking. Each input method comes with its own unique advantages and challenges. As a result, there is a need to study if the back-end algorithm is compatible for users with MND in aiding efficient communication. 
+
+
+</p>
+<h4>
+  6.2.1 Subject Selection and Performance Metrics
+</h4>
+<p>
+  With the concept selection and aim, it is essential to recruit test subjects for the study. For this study, 10 healthy test subjects, selected from a pool of peers and family members were recruited. 2 subjects were recruited from the age range of 21-30, 31-40, 41-50, 51-60 and 61-70 years old.  This is to emulate the current situation of MND affecting a large range of ages between 20 to 70 years old. [16]
+</p>
+<p>
+  For the performance metrics, interviews with patients diagnosed with MND as well as staff from MNDa revealed that individuals with MND prioritise:
+</p>
+<p>
+  1. The effiency and speed of typing (Quantitative)
+</p>
+<p>
+  2. Comfortable Interface when typing (Qualitative)
+</p>
+<p>
+
+  As such, these metrics will be used to assess the performance of the prototypes in the subsequent sections. The test subjects will also be constant throughout the prototypes in this report. 
+
+</p>
+<h4>
+  6.2.2 Prototype Creating Process on AITalk 
+</h4>
+<p>
+  To develop the prototype, an interactive interface (Figure I) was created using Figma, with the primary aim of testing the compatibility of sentence prediction features when using the eyes as the input modality.
+</p>
+<figure>
+  <img src="assets/figI.png" alt="Prototype sketch" style="max-width: 80%; border-radius: 8px;">
+  <figcaption>Figure I: Interactive Interface and Flow (1 to 6)</figcaption>
+</figure>
+<p>
+  The prototype setup involved connecting the Tobii Eye Tracker 5 to a computer. The Tobii Eye Tracker 5 is often loaned to MND patients by the MNDa as seen in figure J.
+</p>
+<figure>
+  <img src="assets/FJ.png" alt="Prototype sketch" style="max-width: 80%; border-radius: 8px;">
+  <figcaption>Figure J: Set-up of Prototype</figcaption>
+</figure>
+<p>
+  With the Figma prototype displayed on the screen, users were able to make selections by looking at specific elements, as the eye tracker captured and translated their gaze gestures into interactive inputs on the interface. With reference to Figure J, to select, the user must look at the right click toolbar on the top of the screen for 2 seconds, then at the intended target for another 2 seconds to register a selection.
+</p>
+<p>
+  All participants were instructed to complete specific selection tasks (e.g., selecting “I”, “Jamal”, and “Pen”, the tick button, and the intended sentence) using only their eye movements. The process was repeated across multiple test cases, with timing, accuracy, and qualitative feedback recorded for each.
+</p>
+<p>
+  The Selection Interaction System allows the user to navigate the whole interface (in Figure I). The implementation is as follows: When the user selects an intended option, the Figma Prototyping interaction will navigate to the next page, using the interaction trigger “On Click” .
+</p>
+<figure>
+  <img src="assets/FL.png" alt="Prototype sketch" style="max-width: 80%; border-radius: 8px;">
+  <figcaption>Figure K: Interaction process of Selection Interaction System</figcaption>
+</figure>
+<p>
+  To ensure the accuracy of the Figma prototypes that will also be used in the subsequent sections, the Error handling interaction system was implemented in all Figma Prototypes.
+</p>
+<p>
+  The <b>Error Handling Interaction System</b> offers visual feedback when an incorrect option is selected, displaying an error screen for 3 seconds before allowing the user to go back to the screen that they were on before. This built-in delay function acts as a buffer to accommodate potential inaccuracies in eye gesture-based selections. This mimics real-life typing behaviour – where users would need to backspace if they selected a wrong letter on their Microsoft Assistive Keyboard, ensuring that the screen-based prototype is realistic and mimics the reality of the device usage.
+</p>
+<p>
+  Its implementation is as follows: 
+</p>
+<p>
+  When the user mis-selects an option, the Figma Prototyping interaction will navigate to the “error page” as seen below in Figure L. Using the interaction trigger “After Delay”  of 3000 ms, the prototype will allow the user to go back to the page he was at before the mis-selection. 
+</p>
+<figure>
+  <img src="assets/FK.png" alt="Prototype sketch" style="max-width: 80%; border-radius: 8px;">
+  <figcaption>Figure L: Error Implementation System</figcaption>
+</figure>
+<p>
+  To create the prototype, I used the current ChatGPT 4o for prediction capabilities. With the prompt “I am someone with MND, type the first 5 sentences that come to mind when I use the Pronoun, Name and Noun”. With that 3 test cases were identified and shown in the table below. (Figure M)
+</p>
+<figure>
+  <img src="assets/FM1.png" alt="Prototype sketch" style="max-width: 80%; border-radius: 8px;">
+  <img src="assets/FM2.png" alt="Prototype sketch" style="max-width: 80%; border-radius: 8px;">
+ 
+  <figcaption>Figure M: Generated Outputs with OpenAI with Comparison to Expected Output</figcaption>
+</figure>
+<p>
+
+  With these 3 test cases, though the expected outputs in mind are not the exactly the same as the sentences predicted by OpenAI based on the Pronoun, Name and Noun. Yet, the sentences highlighted in the table still convey a similar meaning as the expected output and would be able to be used more or less interchangeably. Hence, communication is not adversely affected.
+
+</p>
+<p>
+  Test Case 1 and 2 illustrates the case when the first 5 outputs of OpenAI are satisfactory. Whereas Test Case 3 illustrates the case when the first 5 outputs of OpenAI are not satisfactory, and there is a need for another set of outputs to be generated. In that particular Test Case, it took up to the 7th output for an output similar to that of the expected output to be found.
+</p>
+<h4>
+  6.2.3 Testing Results on AITalk 
+</h4>
+<p>
+  The setup is as shown in the picture below, with the Tobii Eyetracker connected to the computer. To select, the user has to look at the right click toolbar on the top of the screen for 2 seconds, then at the intended target for another 2 seconds to register an input.
+</p>
+<figure>
+  <img src="assets/FJ.png" alt="Prototype sketch" style="max-width: 80%; border-radius: 8px;">
+ 
+  <figcaption>Figure N: Set-up for EyeTracking </figcaption>
+</figure>
+<p>
+  Participants were asked to select the Pronoun, Noun and Name, before selecting the tick button to generate the first 5 sentences predicted by OpenAI. This is done using their eyes.  In the case that none of the sentences match the expected output in mind, they will select the restart button to generate another 5 more outputs from OpenAI. 
+To test the compatibility of the algorithm in helping with completion of sentences for users using eyes as a modality of selection and input, the mean amount of time taken for each test case was calculated.
+The amount of time taken to type out each test cases’ expected output, letter by letter, using the Microsoft assistive keyboard and using the same eye-gaze technology was also taken.
+This serves as a comparison between the mean amount of time taken when using AITalk and when using Traditional typing methods.  
+</p>
+<figure>
+  <img src="assets/FO.png" alt="Prototype sketch" style="max-width: 80%; border-radius: 8px;">
+ 
+  <figcaption>Figure O: Assessing the Compatibility of AITalk (WaveTalks’ Backend Algorithm) with Eye Gesture.</figcaption>
+</figure>
+
+<figure>
+  <img src="assets/FP.png" alt="Prototype sketch" style="max-width: 80%; border-radius: 8px;">
+ 
+  <figcaption>Figure P : Analysis of the Compatibility of AITalk (WaveTalks’ Backend Algorithm) with Eye Gesture.
+
+  </figcaption>
+</figure>
+<p>
+  Across all three test cases, the AITalk system consistently resulted in a lower mean time taken compared to traditional typing methods. This can be seen by a reduction in timing of over 55% in all test cases. 
+</p>
+<p>
+  Standard deviation analysis has revealed that test case 3 has the highest standard deviation in timing. This increased variation is likely due to the additional step required. In Test case 3, all the options had to be scanned through, before a decision was made to generate another 5 more outputs. This process requires more cognitive load than test case 1 and 2 where test subjects were able to find the needed output within the first 5 generated outputs, without the need to see the next 5. 
+  This study has also revealed that older users (>50 years old) take a longer time for selection and this likely contributed to the increased standard deviation in Test case 3. This could be due to age-related factors such as lesser familiarity with digital interfaces or slower processing speed.
+   
+</p>
+<p>
+  This highlights the importance of customising a simple interface for the elderly, with lesser options to prevent cognitive overload and to better suit their preferences. For these users, simplicity and speed of access to a small set of essential phrases will take priority over complex sentence-building features. This also corroborates with interviews with MNDa where they mentioned that the often had a limited set of words of phrases they wish to communicate. For younger users, aged less then 50,  there was a significantly reduction in time taken for sentence construction. This was supported by comments from staff working in MNDa, who through observation feedbacked that this method of communicating was indeed very efficient.  
+
+</p>
+<p>
+  Given the advantage of AITalk over traditional typing methods, it will be employed in both the Screen Based Prototype and Mixed Reality Based Prototype in the subsequent sections.
+</p>
+<h3>
+  6.3 Screen Based Communication System
+</h3>
+<p>
+  With the Screen Based Communication System consisting of:
+</p>
+<p>
+  1. Screen-Based User Interface
+</p>
+<p>
+  2. AITalk Backend Algorithm , mentioned in section 6
+</p>
+<figure>
+  <img src="assets/DiagSB.png" alt="Prototype sketch" style="max-width: 80%; border-radius: 8px;">
+ 
+  <figcaption>Figure Q : System of Screen Based Communication System
+  </figcaption>
+</figure>
+<h4>6.3.1 Detailed Design of User Interface for Screen Based Communication</h4>
+<p>
+  Following the design demand and specifications, while AITalk has been proven to allow for a significant reduction in timing (as mentioned in section 6), it is crucial for the user interface for the Screen Based Communication System to allow for greater efficiency, and comfort when paired alongside the backend algorithm – AITalk. 
+As such, the screen-based user interface must be modified to better fit the needs of patients with MND who use eyes as a modality of input. 
+After interviews with patients with MND, and MNDa, this can be done by firstly increasing the accuracy and speed of constructing sentences for them and secondly reducing eye strain for them. 
+
+</p>
+<p>
+  As such, I propose the following:
+</p>
+<h4>
+  6.3.2 Button Positioning which reduces User Fatigue
+</h4>
+<p>
+  I propose to place buttons in the AAC interface which are easily accessible for users and cause the least amount of difficulty when selecting. 
+</p>
+<h4>
+  6.3.3 Layout which reduces User Fatigue
+</h4>
+<p>
+  The ideal layout aims to allow for greater speed when communicating for patients with MND. An ideal layout is important to help improve the usability of the user interface, reducing the errors and confusions generated by the user's interaction with it and can significantly increase the speed of task execution by the user. [17]
+</p>
+<h4> 
+  6.3.4	Button Sizing and Spacing which allows for accurate selection for users using their eyes for selection
+</h4>
+<p>
+  The ideal button sizing and spacing is one that allows for the greatest speed of typing by the users alongside the highest rate of accuracy. This can cause a trade-off between the number of options that is displayed on the screen for users to select.
+</p>
+<h4>
+  6.3.5	Colour Theme which is comfortable for the User using their eyes for selection  
+</h4>
+<p>
+  The colour scheme is crucial for users of eyetracking, who spend prolonged periods infront of the screen. This is due to certain colours being less straining on the eyes. Not only that, colours are also crucial to draw the attention of users eyes to buttons which could potentially promote better focus and accuracy when selection. 
+</p>
+<h2>
+  7.Product Prototyping
+</h2>
+<h3>
+  7.1 Prototyping of Screen based User Interface
+</h3>
+<p>
+  With the product prototyping and testing being an iterative process, the flowchart below summarises the sequence of prototyping. 
+
+</p>
+
+
+<figure>
+  <img src="assets/FR.png" alt="Prototype sketch" style="max-width: 80%; border-radius: 8px;">
+ 
+  <figcaption>Figure R : Iterative Prototyping of Screen Based User Interface  </figcaption>
+</figure>
+<h3>
+  7.2 Input Method for Prototype
+
+</h3>
+<p>
+  The product prototyping of the user interface (screen based) follows the same method as that of Section 6.2.2 whereby it utilises Figma, and participants have to select the 5 buttons. (“I”, “Jamal”, “Pen”, Tick Button, Selected Sentence) It also uses the <b>
+    Error Handling Interaction System
+  </b> and the<b>
+    Selection Interaction System 
+  </b> to ensure that user inputs are interpreted accurately. 
+</p>
+<h3>
+  7.3 Button Positioning 
+</h3>
+<h4>
+  7.3.1 Product Prototyping of Button Positioning 
+</h4>
+<p>
+  The prototype entails the layout being split into 24 different buttons as shown below and is constructed using Figma. 
+</p>
+<figure>
+  <img src="assets/FS.png" alt="Prototype sketch" style="max-width: 80%; border-radius: 8px;">
+ 
+  <figcaption>Figure S: 24 Buttons on Figma    </figcaption>
+</figure>
+<p>
+
+  It is programmed to guide participants through a fixed selection path (eg. Selecting A1, C3, B6 in order), where the button to be selected will be highlighted in green to indicate the next target to select.
+
+
+
+</p>
+<figure>
+  <img src="assets/FT.png" alt="Prototype sketch" style="max-width: 80%; border-radius: 8px;">
+ 
+  <figcaption>Figure T: Button Positioning Interacting Prototype  </figcaption>
+</figure>
+<p>
+
+  The aim of this prototype is to identify spaces on the screen which would be the hardest for users to reach when using eye gestures, such that interactable buttons will then be avoided in these spaces.
+  Using Figma and Tobii Eye Tracker 5, participants were instructed to select highlighted buttons on a 24-button grid, using only their eyes. The Error Handling Interaction System ensured that accidental selections were accounted for by introducing a delay screen before allowing participants to return to the original task.
+  
+
+</p>
+
+<figure>
+  <img src="assets/FS.png" alt="Prototype sketch" style="max-width: 80%; border-radius: 8px;">
+ 
+  <figcaption>Figure S: 24 Buttons on Figma</figcaption>
+</figure>
+<p>
+
+  To evaluate this, test cases were designed to ensure that all 24 buttons on the user interface are selected and distributed across three key screen zones:
+
+</p>
+<p>
+  •	Corners: A1, A6, D1, D6 
+</p>
+<p>
+  •	Sides: B1, C1 (left side), B6, C6 (right side)
+</p>
+<p>
+  •	Centre: All remaining buttons located within the inner area of the grid (e.g., B2–B5, C2–C5)
+</p>
+<p>
+
+  The test cases are summarised in the table below. These tests ensures that all buttons will be selected by the user, to get their feedback on the fatigue based on the zone that they are in. Each test case is designed to ensure that the participant selects at least one corner, one side, and one centre button. This allows the participant to qualitatively compare the difficulty of selecting buttons from different areas within the same test case.
+
+
+</p>
+
+<figure>
+  <img src="assets/FU.png" alt="Prototype sketch" style="max-width: 80%; border-radius: 8px;">
+ 
+  <figcaption>Figure U: Path for button selection to test for Ideal Button Positioning</figcaption>
+</figure>
+
+<h4>
+  7.3.2 Product Testing and Analysis of Button Positioning 
+</h4>
+<p>
+  After each test case, the participants were required to record which Button was the most difficult to select with their eyes, and which was the easiest to select with their eyes. 
+</p>
+
+<figure>
+  <img src="assets/FV.png" alt="Prototype sketch" style="max-width: 80%; border-radius: 8px;">
+ 
+  <figcaption>Figure V: Table illustrating the most difficult button to select for Participants </figcaption>
+</figure>
+<h4>7.3.3 Analysis and Insights of Button Positioning Prototype
+
+</h4>
+<figure>
+  <img src="assets/FQ.png" alt="Prototype sketch" style="max-width: 80%; border-radius: 8px;">
+ 
+  <figcaption>Figure Q: Table illustrating the most difficult button to select for Majority Buttons </figcaption>
+</figure>
+
+<p>
+  Test Case 1 has revealed that most test subjects felt that the top row (Row A) was difficult for selection. With a minority stating that the bottom row (D5) was difficult to perform selection. With that, more participants found the top corner element (A6) to be easier for selection as compared to just the sides (A4) in the top row. 
+  Test Case 2 has revealed that the left and right sides of the screen were difficult to perform selection, and this was more difficult than selecting a button in the corner (A6). 
+  Test Case 3 has also similarly revealed that most participants for the top row, side element (A2) to be difficult to select. While some participants did mention that the bottom row was hard for selection, results have shown that the bottom side button (D2) was harder to select than the bottom corner button (D6). 
+  Test Case 4 has revealed that all the participants found the top row was hard for selection, with half of them stating that button A3 was hard for selection and the other half chose button A4. This was in comparison to other buttons placed at the extreme right side (B6) and buttons placed in the centre (B3 and B4). 
+  Test Case 5 has revealed that majority of the participants (6 in
+   10) found the top side button (A5) to be hard to select whereas 4 in 10 chose leftmost side button (C1). 
+  With that, it is possible to tell that most participants found the top sides followed by the bottom sides to be the most difficult to select, followed along by the leftmost and rightmost sides, then the corners and centre elements. As such, it is noted to position information instead of interactive elements at the top row. 
+  
+
+
+</p>
+<h3>7.4 Screen Layout </h3>
+<h4>7.4.1 Product Prototyping of Layout </h4>
+<p>
+  The above section has identified that the buttons on the top row proved to be the hardest to select using eye tracking on the screen-based user interface. As such, the difficulties of the top row were taken into consideration when testing out the two layouts. Hence, the buttons for selecting words were placed below the top row. The two screens were made with different layouts, the vertical layout (on the left) and the linear layout (on the right) as seen in Figure R.
+</p>
+<figure>
+  <img src="assets/FigR.png" alt="Prototype sketch" style="max-width: 80%; border-radius: 8px;">
+ 
+  <figcaption>Figure R: Vertical (left) and Linear (right) layout</figcaption>
+</figure>
+<p>
+  Using Figma, the Vertical Layout and Horizontal Layout was designed. 
+  To test the prototype, the user will have to select the buttons “I” , “Jamal”  and “Pen” using their eyes. After which, they would click the “Regenerate” button to regenerate the suggested response one time before selecting the “Tick” button. The selection interaction and the error handling interaction as mentioned in Section 6.2.2 was brought to this prototype, hence ensuring that it replicates a real world usage as much as possible. This standardised “Five Button Test” would also be used to test the button sizing, button spacing and colour theme prototypes.
+  To see which layout allows for the most efficient typing, the time taken for the user to complete the “Five Button Test” was recorded.
+  
+
+</p>
+<h4>
+  7.4.2 Product Testing and Analysis of Layout 
+</h4>
+<p>
+A. Qualitative Testing
+
+</p>
+<p>
+When asked to choose which they felt was easier to navigate, 7 in 10 of the participants preferred the vertical layout.  Most participants mentioned that they appreciated the clear separation of categories into columns which was more intuitive as compared to categories being separated into rows in the linear layout. 
+Some mentioned that it is familiar as it resembled the vertical scrolling when using their mobile phones, which is akin to vertical scanning when they are trying to select a word within a particular category. Some also mentioned that it follows the natural reading flow for sentence building, by looking from left to right from Pronoun, Names and Noun, hence is more intuitive.
+
+</p>
+<p>
+  B. Quantitative Testing
+</p>
+<p>
+  To test out the efficiency of the layout, the time taken for the participants to complete the “Five Button Test” was recorded in the table below. 
+
+</p>
+<figure>
+  <img src="assets/FigS.png" alt="Prototype sketch" style="max-width: 80%; border-radius: 8px;">
+ 
+  <figcaption>Figure S: Analysis of Results of Vertical and Linear Layout
+    
+  </figcaption>
+</figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</p>
       <h3>4.2 Technologies Used</h3>
       <p>[List any technologies, e.g. AI, wearable sensors]</p>
     </div>
